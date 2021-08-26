@@ -780,6 +780,7 @@ section .menu-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
+  text-align: start;
 }
 
 .ourmenu ul li {

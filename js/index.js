@@ -53,7 +53,7 @@ scroll.reveal(`.menu-link h2 `, {
   interval: 100,
 });
 
-scroll.reveal(`.contact p, .location, .hour, iframe`, {
+scroll.reveal(`.contact p, .location p, .hour, iframe`, {
   origin: "top",
   interval: 100,
 });
