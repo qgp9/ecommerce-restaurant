@@ -463,6 +463,7 @@ Menu
   bottom: 0%;
   right: 10%;
   transition: all 500ms ease-in-out;
+  font-size: 2rem;
 }
 
 /*
@@ -745,4 +746,51 @@ Popup
     right: 1rem;
     padding: 0.5rem;
   }
+}
+
+/*
+=========================
+MENU Page 
++++++++++++++++++++++++++
+*/
+section .menu-container {
+  margin: 5rem auto;
+  position: relative;
+}
+
+.menu-container h1 {
+  padding: 2rem;
+  font-size: 5rem;
+}
+
+.menu-container ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourmenu h2 {
+  margin-top: 3rem;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.ourmenu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.ourmenu ul li {
+  max-width: 30rem;
+  margin: 1rem;
+}
+
+.footer-center .order-link a {
+  color: var(--grey3);
+}
+
+.footer-center .order-link a:hover {
+  color: var(--peach);
 }
