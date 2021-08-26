@@ -63,8 +63,9 @@ Header
 */
 .header {
   position: relative;
-  min-height: 100vh;
   overflow-x: hidden;
+  margin-bottom: 3rem;
+  padding-bottom: 0;
 }
 
 .nav.fix-nav {
@@ -273,6 +274,7 @@ Header
 .hero .glide__sildes {
   background-color: var(--grey3);
   height: 800px;
+  width: 100%;
   margin: 0;
   overflow: hidden;
   position: relative;
@@ -417,6 +419,91 @@ Header
     position: absolute;
     top: 50%;
     left: 20%;
+  }
+}
+/*
+================================================
+Main
+++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+/*
+================
+Menu
+++++++++++++++++
+*/
+.menu-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 2rem;
+}
+
+.menu-list li {
+  width: 30rem;
+  padding: 2rem;
+}
+
+.menu-link {
+  color: var(--green);
+  background-color: var(--grey3);
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid var(--green);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 0%;
+  right: 10%;
+  transition: all 500ms ease-in-out;
+}
+
+/*
++++++++++++++++++
+Location
++++++++++++++++++
+*/
+.contact {
+  background-color: var(--grey3);
+  padding: 2rem 0;
+}
+
+.contact .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact div {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.map {
+  height: 500px;
+  margin-bottom: 5px;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 567px) {
+  .contact .title {
+    width: 90%;
+  }
+
+  .map {
+    height: 350px;
   }
 }
 
