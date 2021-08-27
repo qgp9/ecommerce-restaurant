@@ -461,11 +461,56 @@ Menu
   border-radius: 0.5rem;
   position: absolute;
   bottom: 0%;
-  right: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   transition: all 500ms ease-in-out;
   font-size: 2rem;
 }
 
+.menu-link:hover {
+  color: var(--black2);
+  font-weight: 600;
+}
+
+.menu-link svg {
+  height: 1.3rem;
+  width: 1.3rem;
+  color: var(--green);
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-list.container {
+    margin: 0 12rem;
+    padding-bottom: 5rem;
+  }
+  .menu-container .title h1 {
+    font-size: 3rem;
+  }
+  .menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+
+  .menu-link {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .menu-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 /*
 +++++++++++++++++
 Location
