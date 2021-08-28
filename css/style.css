@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Titillium+Web:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Besley", serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  padding: 100px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #222;
+  color: white;
+  transition: right 500ms ease-in-out;
+}
+
+.container.active {
+  right: 300px;
+}
+
+header img,
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo span {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+header .icon img {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+header .icon {
+  position: relative;
+  cursor: pointer;
+  background: url("./images/burger.svg");
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+header .icon.active {
+  background: url("./images/close.svg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.container header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #311b01, #dae90c);
+  mix-blend-mode: overlay;
+}
+
+.container .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+}
+
+.text h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.5rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.text a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.text a::after {
+  content: "";
+  position: absolute;
+  top: -12%;
+  left: -3%;
+  width: 105%;
+  height: 120%;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.text .right ul li {
+  list-style: none;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+@media (max-width: 1200px) {
+  .text h1 {
+    font-size: 4rem;
+  }
+
+  .text p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 996px) {
+  .text h1 {
+    font-size: 3.5rem;
+  }
+
+  .text p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text h1 {
+    font-size: 3.2rem;
+  }
+
+  .text p {
+    font-size: 1.2rem;
+  }
+
+  .container header {
+    padding: 10px 40px;
+  }
+
+  .container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 567px) {
+  .container .text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text .center {
+    margin: 3rem auto;
+  }
+  .text h1 {
+    font-size: 3rem;
+  }
+
+  .text p {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+
+  .container header {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .text a {
+    padding: 10px 20px;
+    outline-offset: 5px;
+    text-decoration: none;
+  }
+
+  header img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.menu {
+  position: absolute;
+  right: -300px;
+  background-color: white;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  transition: right 500ms ease-in-out;
+}
+
+.container.active + .menu {
+  right: 0;
+}
+
+.menu ul {
+  position: relative;
+  list-style-type: none;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #222;
+}
