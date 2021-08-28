@@ -96,7 +96,7 @@ header .icon.active {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, #311b01, #dae90c);
+  background: linear-gradient(to top, rgb(24, 24, 24), #311b01);
   mix-blend-mode: overlay;
 }
 
