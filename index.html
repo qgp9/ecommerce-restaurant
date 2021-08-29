@@ -7,217 +7,150 @@
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- Favicon -->
-    <!--<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">-->
     <link rel="shortcut icon" href="./images/icons8-food-bar-48.png" type="image/x-icon">
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Glidejs -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- ======== Slider Js ======= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css"
+    />
+    <!-- ======== StyleSheet ======= -->
+    <link rel="stylesheet" href="css/styless.css" />
     <title>Korean Restaurant in Helsinki</title>
 </head>
 <body>
+    <!-- Header -->
     <header class="header" id="header">
-        <!-- Nav -->
-        <div class="nav">
-          <div class="top-nav">
-            <div class="container d-flex">
-                <div class="i-flex">
-                  <i class='bx bx-phone-call' ></i> 
-                  358)23-456-1234
-                  <i class='bx bx-location-plus' ></i>
-                  Merimiehenkatu 00, 00150 Helsinki                
+        <!-- Navigation -->
+        <div class="navigation">
+            <nav class="nav d-flex">
+                <div class="logo">
+                    <a href="index.html">
+            <!--  <img src="./images/icons8-cooked-rice-48.png" alt="">-->
+                       <h1>Manna</h1>
+                    </a>
+                    
                 </div>
-                <ul class="d-flex">
-                    <li><i class='bx bx-time' ></i> Mon-Fri:11.00 - 21.30 </li>
-                    <li><i class='bx bx-time' ></i> Sat:12.00 - 21.30 </li>
-                    <li><i class='bx bx-time' ></i> Sun:Closed</li>
-                </ul>
-            </div>
-          </div>
-          <!-- navigation -->
-          <div class="navigation">
-            <div class="nav-center container d-flex">
-                <a href="index.html" class='logo'>
-                    <h2>Korea <span>korean cuisine</span></h2>
-                </a>
                 <ul class="nav-list d-flex">
-                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
-                    <!-- mobile -->
-                    <li class="icons d-flex">
-                        <a href="facebook.com" class="icon">
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/ravintolamanna" class="nav-link">
                             <i class='bx bxl-facebook-square' ></i>
                         </a>
-                        <a href="instagram.com" class="icon">
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.instagram.com/ravintolamanna/" class="nav-link">
                             <i class='bx bxl-instagram' ></i>
                         </a>
-                        <a href="tripadvisor.com" class="icon">
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g189934-d16883848-Reviews-Restaurant_Manna-Helsinki_Uusimaa.html" class="nav-link">
                             <i class='bx bxl-trip-advisor' ></i>
                         </a>
-                        <a href="https://wolt.com/fi/fin/helsinki/restaurant/ravintola-manna" class="icon">
-                            w
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://wolt.com/fi/fin/helsinki/restaurant/ravintola-manna" class="nav-link">
+                            <img src="./images/wolt.png" alt="wolt-online-order">
                         </a>
-                        <a href="foodora.com" class="icon">
-                            f
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.foodora.fi/en/restaurant/s0vx/ravintola-manna" class="nav-link">
+                            <img src="./images/foodora.png" alt="foodora-online-order">
                         </a>
                     </li>
                 </ul>
-                <!-- mobile end -->
-
-                <div class="icons d-flex">
-                    <a href="facebook.com" class="icon">
-                        <i class='bx bxl-facebook-square' ></i>
-                    </a>
-                    <a href="instagram.com" class="icon">
-                        <i class='bx bxl-instagram' ></i>
-                    </a>
-                    <a href="tripadvisor.com" class="icon">
-                        <i class='bx bxl-trip-advisor' ></i>
-                    </a>
-                    <a href="https://wolt.com/fi/fin/helsinki/restaurant/ravintola-manna" class="icon">
-                        w
-                    </a>
-                    <a href="foodora.com" class="icon">
-                        f
-                    </a>
-                </div>
-  
-                <div class="hamburger">
-                    <i class="bx bx-menu-alt-left"></i>
-                </div>
+            </nav>
+        </div>
+        <!-- Video slider -->
+          <div class="swiper-container slider-1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <video muted loop autoplay>
+                  <source src="./images/Food - 24999.mp4" type="video/mp4" />
+                  <source src="./images/Kimchi - 24473.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic6.jpg" alt="hero image" />
+              </div>
             </div>
           </div>
-          <!-- navigation end -->
-        </div>
-
-        <!-- Hero -->
-        <div class="hero">
-        <div class="glide" id="glide_1">
-            <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                <!-- First slide -->
-                <li class="glide__slide">
-                <div class="center">
-                    <div class="left">
-                    <span class="">The best Korean Dining in Helsinki</span>
-                    <h1 class="">Enjoy much variety to Korean food </h1>
-                    <h1> than just your typical finds!</h1>
-                    <p></p>
-                    <a href="menu.html" class="hero-btn">Menu</a>
-                    </div>
-                    <div class="right">
-                        <img class="img1" src="./images/pic1.jpg" alt="">
-                    </div>
-                </div>
-                </li>
-                <!-- Second slide -->
-                <li class="glide__slide">
-                <div class="center">
-                    <div class="left">
-                        <span class="">We serve <strong>Authentic Korean Foods</strong></sp>
-                        <h1 class="title1">Enjoy much variety to Korean food </h1>
-                        <h1 class="title2">than just your typical finds!</h1>  
-                        <p>.</p>
-                        <a href="menu.html" class="hero-btn">Menu</a>
-                    </div>
-                    <div class="right">
-                    <img class="img2" src="./images/pic8.jpg" alt="">
-                    </div>
-                </div>
-                </li>
-            </ul>
+          <div class="overlay"></div>
+    
+          <div class="content">
+            <div class="left">
+                <h3>Location - </h3> 
+                <p>Merimiehenkatu 00, 00150 Helsinki</p>
+                <span>(358)23-456-7890</span>
             </div>
-      
-            <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <div class="center">
+                <h2>We serve <h1>Authentic Korean Dishes</h1></h2>
+                <span>Enjoy much variety to Korean food than just your typical finds!</span>
+                <p>Indulge your tastebuds in scintillating Korean flavors!</p>
+                <a href="menu.html" class="btn">Our Menu</a>
             </div>
-      <!--
-            <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                <svg>
-                <use xlink:href="./images/sprite.svg#icon-arrow-left2">
-                </use>
-                </svg>
-            </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                <svg>
-                <use xlink:href="./images/sprite.svg#icon-arrow-right2">
-                </use>
-                </svg>
-            </button>
+            <div class="right">
+                <h3>Hours - </h3>
+                <ul class="hours">
+                  <li> Mon-Fri : 11.00 - 21.30 </li>
+                  <li> Sat : 12.00 - 21.30 </li>
+                  <li> Sun : Closed</li>
+                </ul>
             </div>
-      -->
-        </div>
-        </div>
-        <!-- Hero glide end -->
+          </div>
+    <!--
+          <div class="arrows d-flex">
+            <div class="swiper-prev d-flex">
+              <i class="bx bx-chevron-left swiper-icon"></i>
+            </div>
+            <div class="swiper-next d-flex">
+              <i class="bx bx-chevron-right swiper-icon"></i>
+            </div>
+          </div>
+    -->
+        </header>
     </header>
 
     <main>
-      <!-- Menu -->
-      <section class="section menu-container" id="menu">
-        <div class="title"><h1>Some of Our Favorites</h1></div>
-        <div class="menu-list container">
-          <ul class="menu-list">
-            <li class="drop-menu1">
-              <h3>Kimchijeon 🌶 -- 8</h3>
-              <p>Pancake with hot kimchi, onion and chili</p>
-            </li>
-            <li class="drop-menu3">
-              <h3>Bulgogi bibimbap -- 15.9</h3>
-              <p>Rice, Korean marinated beef with soy sauce, carrots, zucchini, cabbage, sprouts, radish and fried egg</p>
-            </li>
-            <li class="drop-menu4">
-              <h3>Fiery pig bibimbap 🌶 -- 15.9</h3>
-              <p>Rice, Korean marinated pork with chili, carrot, zucchini, cabbage, sprouts, radish and chives</p>
-            </li>
-            <li class="drop-menu2">
-              <h3>Yachaejeon -- 8</h3>
-              <p>Pancake with carrot, zucchini, onion and spring onion</p>
-            </li>
-            <li class="drop-menu3">
-              <h3>Bulgogi bibimbap -- 15.9</h3>
-              <p>Rice, Korean marinated beef with soy sauce, carrots, zucchini, cabbage, sprouts, radish and fried egg</p>
-            </li>
-            <li class="drop-menu1">
-              <h3>Kimchijeon 🌶 -- 8</h3>
-              <p>Pancake with hot kimchi, onion and chili</p>
-            </li>
-            <li class="drop-menu2">
-              <h3>Yachaejeon -- 8</h3>
-              <p>Pancake with carrot, zucchini, onion and spring onion</p>
-            </li>
-            <li class="drop-menu3">
-              <h3>Bulgogi bibimbap -- 15.9</h3>
-              <p>Rice, Korean marinated beef with soy sauce, carrots, zucchini, cabbage, sprouts, radish and fried egg</p>
-            </li>
-            <li class="drop-menu4">
-              <h3>Fiery pig bibimbap 🌶 -- 15.9</h3>
-              <p>Rice, Korean marinated pork with chili, carrot, zucchini, cabbage, sprouts, radish and chives</p>
-            </li>
-            <li class="drop-menu1">
-              <h3>Kimchijeon 🌶 -- 8</h3>
-              <p>Pancake with hot kimchi, onion and chili</p>
-            </li>
-            <li class="drop-menu4">
-              <h3>Fiery pig bibimbap 🌶 -- 15.9</h3>
-              <p>Rice, Korean marinated pork with chili, carrot, zucchini, cabbage, sprouts, radish and chives</p>
-            </li>
-          </ul>
+      <section class="section menu" id="menu">
+        <div class="title">
+          <h1>Some of Our Favorites</h1>
         </div>
-        <div class="menu-link"><a href="menu.html">
-          <p>
-            View Our Full Menu
-            <svg>
-              <use xlink:href="./images/sprite.svg#icon-arrow-right2">
-              </use>
-            </svg>
-          </p>
-        </a></div>
-        
+          
+        <div class="row container">
+          <div class="swiper-container slider-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/pic1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic3.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic4.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic5.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic6.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="custom-next d-flex">
+            <i class="bx bx-chevron-right swiper-icon"></i>
+          </div>
+          <div class="custom-prev d-flex">
+            <i class="bx bx-chevron-left swiper-icon"></i>
+          </div>
+          <div class="custom-pagination d-flex"></div>
+        </div>
+        <div class="explore">
+          <a href="menu.html" class="btn">View Our Full Menu</a>
+        </div>
       </section>
 
       <!-- Contact Location -->
@@ -249,7 +182,6 @@
         </div>
       </section>
     </main>
-    
 
     <!-- Footer -->
     <footer id="footer" class="section footer">
@@ -290,39 +222,12 @@
       </div>
     </footer>
     <!-- End Footer -->
-<!-- 
-    
-    <div class="popup">
-      <div class="popup-content">
-        <div class="popup-close">
-          <i class='bx bx-x'></i>
-        </div>
-        <div class="popup-left">
-          <div class="popup-img-container">
-            <img class="popup-img" src="./images/pic1.jpg" alt="popup">
-          </div>
-        </div>
-        <div class="popup-right">
-          <div class="right-content">
-            <h1>OPENING HOURS</h1>
-            <ul class="hour">
-              <li> <i class='bx bx-time' ></i> Mon-Fri: 11.00 - 21.30 </li>
-              <li> <i class='bx bx-time' ></i> Sat: 12.00 - 21.30 </li>
-              <li> <i class='bx bx-time' ></i> Sun: Closed</li>
-          </ul>
-          </div>
-        </div>
-      </div>
-  </div>
- -->
-    
-
-    <!-- Glidejs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.js"></script>
-    <!-- Scroll reveal-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-    <!-- js -->
-    <script src="./js/index.js"></script>
-    <script src="./js/slider.js"></script>
+  <!-- ======== SwiperJS ======= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.js"></script>
+  <!-- ======== Scroll reveal ======== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+  <!-- js -->
+  <script src="./js/index.js"></script>
+  <script src="./js/slider.js"></script>   
 </body>
 </html>

@@ -1,17 +1,51 @@
+/* =========== Fonts ============ */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Titillium+Web:wght@200;300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+/* =========== Browser Reset ============ */
+:root {
+  /* Color Variables */
+  --primary: #ffc400;
+  --text-1: #333;
+  --text-2: #a9a9a9;
+  --white: #fff;
+  --shadow-300: 0 5px 5px rgba(0, 0, 0, 0.3);
+  --shadow-500: 0 5px 5px rgba(0, 0, 0, 0.5);
+  --transition-300: all 300ms ease-in-out;
+  --transition-500: all 500ms ease-in-out;
+}
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
-  font-family: "Besley", serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  overflow: hidden;
+  font-family: "Besley", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: var(--white);
+  color: var(--text-1);
+  /*overflow: hidden;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
@@ -45,7 +79,7 @@ header .logo {
 
 header .logo span {
   color: white;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -101,7 +135,6 @@ header .icon.active {
 }
 
 .container .text {
-  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -116,7 +149,7 @@ header .icon.active {
 
 .text h1 {
   font-size: 4.5rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -194,6 +227,10 @@ header .icon.active {
 }
 
 @media (max-width: 567px) {
+  header .logo span {
+    color: white;
+    font-size: 1.4rem;
+  }
   .container .text {
     display: flex;
     flex-direction: column;
@@ -207,7 +244,7 @@ header .icon.active {
   }
 
   .text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 90%;
   }
 

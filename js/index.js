@@ -42,22 +42,8 @@ links.map((link) => {
 });
 */
 //Scroll reveal
-const scroll = ScrollReveal({
-  distance: "100px",
-  duration: 2500,
-  reset: true,
-});
 
-scroll.reveal(`.menu-link h2 `, {
-  origin: "right",
-  interval: 100,
-});
-
-scroll.reveal(`.contact p, .location p, .hour, iframe`, {
-  origin: "top",
-  interval: 100,
-});
-
+/*
 //Pop up
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".popup-close");
@@ -73,3 +59,4 @@ if (popup) {
     }, 1000);
   });
 }
+*/
