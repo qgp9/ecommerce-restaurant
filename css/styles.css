@@ -165,6 +165,7 @@ video {
   width: 3.5rem;
   height: 3.5rem;
   padding: 0.4rem;
+  position: relative;
 }
 
 .nav-item i {
@@ -174,6 +175,16 @@ video {
 
 .nav-link img {
   border-radius: 50%;
+}
+
+.nav-link span {
+  display: none;
+}
+
+.nav-link img:hover {
+  width: 4rem;
+  height: 4rem;
+  transform: all 300s ease-in-out;
 }
 
 @media only screen and (max-width: 540px) {
@@ -213,6 +224,12 @@ video {
   .nav-item img {
     width: 3rem;
     height: 3rem;
+  }
+
+  .nav-link img:hover {
+    width: 3.3rem;
+    height: 3.3rem;
+    transform: all 300s ease-in-out;
   }
 }
 
@@ -534,7 +551,7 @@ Reservation
 .inputBox input {
   outline: none;
   border-radius: 0.2rem;
-  border: 0.2rem solid #333;
+  border: 0.1rem solid rgb(160, 160, 160);
   margin: 2rem 0;
   padding: 0 1rem;
   background: none;
@@ -551,7 +568,7 @@ Reservation
 
 .inputBox h3 {
   position: absolute;
-  top: 2.1rem;
+  top: 2.5rem;
   left: 6%;
   color: rgb(90, 90, 77);
   text-shadow: 5px 5px 0px rgba(37, 59, 112, 0.2);
