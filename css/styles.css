@@ -500,7 +500,73 @@ Main
 
 /*
 +++++++++++++++++
-Location
+Reservation
++++++++++++++++++
+*/
+#reservation {
+  background: linear-gradient(#f7f7f8, #e7e7e7);
+}
+
+.reservation {
+  padding: 2rem 0;
+}
+
+.reservation .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation form {
+  padding-top: 2rem;
+  margin: 1rem 2rem;
+  border-radius: 1rem;
+  width: 90%;
+}
+
+.inputBox {
+  position: relative;
+  text-align: center;
+}
+
+.inputBox input {
+  outline: none;
+  border-radius: 0.2rem;
+  border: 0.2rem solid #333;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  background: none;
+  height: 4rem;
+  width: 90%;
+  font-size: 1.8rem;
+}
+
+.inputBox input:focus ~ h3,
+.inputBox input:valid ~ h3 {
+  font-size: 1.6rem;
+  top: -1rem;
+}
+
+.inputBox h3 {
+  position: absolute;
+  top: 2.1rem;
+  left: 6%;
+  color: rgb(90, 90, 77);
+  text-shadow: 5px 5px 0px rgba(37, 59, 112, 0.2);
+}
+
+input[type="submit"] {
+  margin-bottom: 2rem;
+  margin-left: 50%;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/*
++++++++++++++++++
+Contact
 +++++++++++++++++
 */
 .contact {
@@ -513,6 +579,9 @@ Location
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#contact {
 }
 
 .contact div {
