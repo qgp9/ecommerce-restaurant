@@ -76,7 +76,7 @@ video {
 }
 
 .title {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .title h1 {
@@ -92,6 +92,7 @@ video {
   background-color: var(--primary);
   padding: 1.5rem 2.5rem;
   transition: var(--transition-300);
+  margin-top: 3rem;
 }
 
 .btn:hover {
@@ -190,7 +191,7 @@ video {
   }
 
   .logo h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--white);
   }
 
@@ -199,14 +200,19 @@ video {
   }
 
   .nav-link {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.3rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
   }
 
   .nav-item i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
+  }
+
+  .nav-item img {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -360,16 +366,15 @@ Main
 /*=============== slider2: menu ================*/
 .menu {
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .menu .title {
   text-align: center;
-  margin-bottom: 7rem;
 }
 
 .menu .title h1 {
   font-size: 4rem;
-  margin: 2rem;
 }
 
 .menu .row {
@@ -464,29 +469,24 @@ Main
   }
 }
 
-@media (max-width: 540px) {
-  .menu .title h1 {
-    font-size: 2.5rem;
-  }
-
+@media (max-width: 600px) {
   .menu .swiper-slide {
     height: 250px;
   }
 
   .custom-next,
   .custom-prev {
-    top: -20%;
-    height: 3rem;
-    width: 3rem;
+    display: none;
   }
-  .custom-prev {
-    right: 60px;
+
+  .menu .explore {
+    margin-top: 4rem;
   }
 }
 
 @media (max-width: 425px) {
-  .menu .explore {
-    margin-top: 4rem;
+  .menu .title h1 {
+    font-size: 2.5rem;
   }
 
   .explore .btn {
@@ -520,8 +520,8 @@ Reservation
 }
 
 .reservation form {
-  padding-top: 2rem;
-  margin: 1rem 2rem;
+  /* padding-top: 2rem;
+  margin: 1rem 2rem;*/
   border-radius: 1rem;
   width: 90%;
 }
@@ -560,13 +560,14 @@ Reservation
 input[type="submit"] {
   margin-bottom: 2rem;
   margin-left: 50%;
+  transform: translateX(-50%);
   border: none;
   border-radius: 0.5rem;
 }
 
 /*
 +++++++++++++++++
-Contact
+Contact Us
 +++++++++++++++++
 */
 .contact {
