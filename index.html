@@ -89,7 +89,7 @@
                 <h2>We serve <h1>Authentic Korean Dishes</h1></h2>
                 <span>Enjoy much variety to Korean food than just your typical finds!</span>
                 <p>Indulge your tastebuds in scintillating Korean flavors!</p>
-                <a href="https://form.jotform.com/212512046221338" class="btn">Make a Reservation</a>
+                <a href="#reservation" class="btn">Make a Reservation</a>
             </div>
             <div class="right">
                 <h3>Hours - </h3>
@@ -161,33 +161,33 @@
           <div class="title">
             <h1>Reservation</h1>
           </div>
-          <form action="" class="book-info">
+          <form action="https://formsubmit.co/el/yusofu" method="POST" target="_blank" class="book-info">
             <div class="inputBox">
-              <input type="text" required>
+              <input type="text" name="name" required>
               <h3>full name</h3>
             </div>
             <div class="inputBox">
-              <input type="text" required>
+              <input type="text" name="phone" required>
               <h3>Phone</h3>
             </div>
             <div class="inputBox">
-              <input type="email" required>
+              <input type="email" name="email" required>
               <h3>Email</h3>
             </div>
             <div class="inputBox">
-              <input type="number" required>
+              <input type="number" name="party" required>
               <h3>Party</h3>
             </div>
             <div class="inputBox">
-              <input type="date" required>
+              <input type="date" name="date" required>
               <h3></h3>
             </div>
             <div class="inputBox">
-              <input type="time" required>
+              <input type="time" name="time" required>
               <h3></h3>
             </div>
             <div class="submit-btn">
-              <input type="submit" value='Book a Table' class='btn'>
+              <button type="submit" class="btn">Book a Table</button>
             </div>
           </form>
         </div>
