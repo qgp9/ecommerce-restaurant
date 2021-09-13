@@ -7,7 +7,7 @@
 /* =========== Browser Reset ============ */
 :root {
   /* Color Variables */
-  --primary: #ffc400;
+  --primary: rgba(175, 149, 74, 1);
   --text1: #333;
   --text2: #a9a9a9;
   --grey1: rgb(107, 113, 119);
@@ -171,7 +171,7 @@ video {
 
 .nav-item i {
   font-size: 3rem;
-  color: black;
+  color: rgba(175, 149, 74, 1);
 }
 
 .nav-link i:hover {
@@ -256,7 +256,8 @@ video {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, rgb(24, 24, 24), #311b01);
+  /*background: linear-gradient(to top, rgb(24, 24, 24), #311b01);*/
+  background: rgba(0, 0, 0, 0.5);
   mix-blend-mode: overlay;
 }
 
@@ -434,7 +435,7 @@ Main
   background-color: var(--primary);
   color: var(--white);
   font-size: 2.5rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   height: 4rem;
   width: 4rem;
   justify-content: center;
