@@ -124,6 +124,10 @@ video {
     margin: 5rem 0;
     padding: 5rem 0 0;
   }
+
+  .btn {
+    font-size: 1.5rem;
+  }
 }
 /* =========== Navigation ============ */
 .header {
@@ -312,8 +316,10 @@ video {
 }
 
 .content .link {
-  color: red;
-  margin-left: 3rem;
+  color: rgb(180, 148, 5);
+  background-color: rgb(224, 223, 222);
+  margin-left: 1rem;
+  opacity: 0.8;
 }
 
 .content .btn {
@@ -423,10 +429,15 @@ Main
 */
 
 /*=============== slider2: menu ================*/
-.menu {
+#menu {
   overflow: hidden;
   margin: 0 auto;
   padding-bottom: 5rem;
+  background-image: linear-gradient(
+    180deg,
+    rgba(175, 149, 74, 0.43) 33%,
+    rgb(252, 250, 250) 100%
+  );
 }
 
 .menu .title {
@@ -437,8 +448,8 @@ Main
   font-size: 4rem;
 }
 
-.menu .row {
-  width: 95vw;
+.menu .row-container {
+  max-width: 114rem;
   position: relative;
 }
 
@@ -451,37 +462,64 @@ Main
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 300px;
+  height: 500px;
 }
 
 .menu .swiper-slide img {
   display: block;
   width: 100%;
 }
-
+/*
 .custom-next,
 .custom-prev {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--primary);
+  background-color: var(--gold);
   color: var(--white);
   font-size: 2.5rem;
   border-radius: 1rem;
+  border: 2px solid white;
   height: 4rem;
   width: 4rem;
   justify-content: center;
   cursor: pointer;
+  z-index: 100;
 }
 
 .custom-next {
-  right: -60px;
+  right: 0rem;
 }
 
 .custom-prev {
-  left: -60px;
+  left: 0rem;
+}
+*/
+.custom-next,
+.custom-prev {
+  position: absolute;
+  top: -15%;
+  transform: translateY(0%);
+  background-color: var(--gold);
+  color: var(--white);
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  border: 2px solid white;
+  height: 4rem;
+  width: 4rem;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
 }
 
+.custom-next {
+  right: 10px;
+}
+
+.custom-prev {
+  left: auto;
+  right: 70px;
+}
 .swiper-pagination-bullet {
   width: 30px;
   height: 7px;
@@ -490,7 +528,7 @@ Main
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--primary);
+  background-color: var(--gold);
 }
 
 .swiper-pagination-bullet:not(:last-child) {
@@ -500,10 +538,6 @@ Main
 .menu .explore {
   text-align: center;
   margin-top: 8rem;
-}
-
-.explore .btn {
-  border-radius: 5px;
 }
 
 @media (max-width: 1200px) {
@@ -530,10 +564,6 @@ Main
 }
 
 @media (max-width: 600px) {
-  .menu .swiper-slide {
-    height: 250px;
-  }
-
   .custom-next,
   .custom-prev {
     display: none;
@@ -548,14 +578,6 @@ Main
   .menu .title h1 {
     font-size: 2.5rem;
   }
-
-  .explore .btn {
-    padding: 1rem;
-  }
-
-  .explore a {
-    font-size: 1.5rem;
-  }
 }
 
 /*
@@ -564,7 +586,10 @@ Reservation
 +++++++++++++++++
 */
 #reservation {
-  background: linear-gradient(rgb(250, 248, 248), #e7e7e7);
+  background: linear-gradient(
+    rgb(250, 248, 248),
+    url("/images/M10 치킨비빔밥.jpg")
+  );
 }
 
 .reservation {
