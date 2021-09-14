@@ -27,7 +27,6 @@
             <nav class="nav d-flex">
                 <div class="logo">
                     <a href="index.html">
-            <!--  <img src="./images/icons8-cooked-rice-48.png" alt="">-->
                        <h1>Manna</h1>
                     </a>
                     
@@ -81,8 +80,9 @@
               </div>
             </div>
           </div>
+
           <div class="overlay"></div>
-    
+
           <div class="content">
             <div class="left">
                 <h3>Location - </h3> 
@@ -93,7 +93,8 @@
                 <h2>We serve <h1>Authentic Korean Dishes</h1></h2>
                 <span>Enjoy much variety to Korean food than just your typical finds!</span>
                 <p>Indulge your tastebuds in scintillating Korean flavors!</p>
-                <a href="#reservation" class="btn">Make a Reservation</a>
+                <a href="#reservation" class="btn">Reservation</a>
+                <a href="menu.html" class="btn">Menu</a>
             </div>
             <div class="right">
                 <h3>Hours - </h3>
@@ -119,43 +120,45 @@
 
     <main>
       <section class="section menu" id="menu">
-        <div class="title">
-          <h1>Some of Our Favorites</h1>
-        </div>
-          
-        <div class="row container">
-          <div class="swiper-container slider-2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./images/pic1.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pic2.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pic3.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pic4.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pic5.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pic6.jpg" alt="">
+        <div class="menu container">
+          <div class="title">
+            <h1>Some of Our Favorites</h1>
+          </div>
+            
+          <div class="row container">
+            <div class="swiper-container slider-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/M1 저녁 불고기돌솥.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/M14 매운치킨주먹밥.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/M15 저녁제육볶음밥.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/M16 문어볶음밥.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/M17 뼈없는 양념치킨.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/M19 김치찌개.jpg" alt="">
+                </div>
               </div>
             </div>
+            <div class="custom-next d-flex">
+              <i class="bx bx-chevron-right swiper-icon"></i>
+            </div>
+            <div class="custom-prev d-flex">
+              <i class="bx bx-chevron-left swiper-icon"></i>
+            </div>
+            <div class="custom-pagination d-flex"></div>
           </div>
-          <div class="custom-next d-flex">
-            <i class="bx bx-chevron-right swiper-icon"></i>
+          <div class="explore">
+            <a href="menu.html" class="btn">View Our Full Menu</a>
           </div>
-          <div class="custom-prev d-flex">
-            <i class="bx bx-chevron-left swiper-icon"></i>
-          </div>
-          <div class="custom-pagination d-flex"></div>
-        </div>
-        <div class="explore">
-          <a href="menu.html" class="btn">View Our Full Menu</a>
         </div>
       </section>
 
@@ -179,7 +182,7 @@
               <h3>Email</h3>
             </div>
             <div class="inputBox">
-              <input type="number" name="party" required>
+              <input type="number" min="1" name="party" required>
               <h3>Party</h3>
             </div>
             <div class="inputBox">
@@ -229,8 +232,7 @@
 
     <!-- Footer -->
     <footer id="footer" class="section footer">
-      <div class="container">
-        <div class="footer-container">
+      <div class="footer container">
           <div class="footer-center">
             <h3>Manna korean cuisine</h3>
             <p>Merimiehenkatu 18,</p>
@@ -261,8 +263,6 @@
               sunjus.dev@gmail.com
             </div>
           </div>
-        </div>
-      </div>
       </div>
     </footer>
     <!-- End Footer -->
