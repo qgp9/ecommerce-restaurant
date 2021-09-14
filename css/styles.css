@@ -723,7 +723,7 @@ Footer
   margin: 0;
 }
 
-.footer .container {
+.footer-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   color: var(--white);
