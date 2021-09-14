@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 /* =========== Browser Reset ============ */
 :root {
   /* Color Variables */
@@ -161,6 +162,7 @@ video {
 .logo h1 {
   font-size: 3rem;
   color: var(--white);
+  font-family: "MedievalSharp", cursive;
 }
 
 .nav-item:not(:last-child) {
@@ -433,11 +435,6 @@ Main
   overflow: hidden;
   margin: 0 auto;
   padding-bottom: 5rem;
-  background-image: linear-gradient(
-    180deg,
-    rgba(175, 149, 74, 0.43) 33%,
-    rgb(252, 250, 250) 100%
-  );
 }
 
 .menu .title {
