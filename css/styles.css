@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* =========== Browser Reset ============ */
 :root {
   /* Color Variables */
@@ -12,9 +13,8 @@
   --text1: #1e140a;
   --text2: rgb(250, 249, 249);
   --grey1: rgb(107, 113, 119);
-  --grey2: rgb(255, 255, 255);
-  --grey3: rgb(251, 247, 237);
-  --grey4: #262626;
+  --grey2: rgb(251, 247, 237);
+  --grey3: #262626;
   --white: #fff;
   --shadow-300: 0 5px 5px rgba(0, 0, 0, 0.3);
   --shadow-500: 0 5px 5px rgba(0, 0, 0, 0.5);
@@ -40,13 +40,13 @@ body {
   font-family: "Besley", serif;
   font-size: 1.6rem;
   font-weight: 400;
-  background-color: var(--white);
+  background-color: var(--grey2);
   color: var(--white);
   /*overflow: hidden;*/
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 li {
@@ -81,9 +81,10 @@ video {
 }
 
 .title h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--text1);
   text-shadow: 5px 5px 0px rgba(37, 59, 112, 0.2);
+  text-transform: uppercase;
 }
 
 .btn {
@@ -97,6 +98,7 @@ video {
   transition: var(--transition-300);
   margin-top: 3rem;
   cursor: pointer;
+  transition: var(--transition-500);
 }
 
 .btn:hover {
@@ -297,6 +299,7 @@ video {
   font-weight: 900;
   margin-bottom: 20px;
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
+  border-bottom: 1px solid white;
 }
 
 .content h2,
@@ -333,7 +336,7 @@ video {
   color: var(--text2);
   font-weight: 700;
   margin: 2rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
   border: 2px solid white;
   border-radius: 0.5rem;
 }
@@ -400,6 +403,7 @@ video {
   .content h1 {
     font-size: 3rem;
     line-height: 3.1rem;
+    padding: 2rem;
   }
 
   .content h2 {
@@ -441,10 +445,6 @@ Main
   text-align: center;
 }
 
-.menu .title h1 {
-  font-size: 4rem;
-}
-
 .menu .row-container {
   max-width: 114rem;
   position: relative;
@@ -460,11 +460,18 @@ Main
   background-size: cover;
   width: 300px;
   height: 500px;
+  border: 3px solid white;
 }
 
 .menu .swiper-slide img {
   display: block;
   width: 100%;
+  z-index: 0;
+}
+
+.menu .swiper-slide p {
+  z-index: 10;
+  color: white;
 }
 /*
 .custom-next,
@@ -684,9 +691,6 @@ Contact Us
   color: var(--text1);
 }
 
-.location h3 {
-}
-
 .map {
   height: 500px;
   margin-bottom: 5px;
@@ -713,16 +717,13 @@ Footer
 */
 
 .footer {
-  background-color: var(--grey4);
+  background-color: var(--grey3);
   padding: 3rem 1rem;
   line-height: 2rem;
+  margin: 0;
 }
 
-.footer-center span {
-  margin-right: 1rem;
-}
-
-.footer-container {
+.footer .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   color: var(--white);
@@ -731,13 +732,13 @@ Footer
 .footer-center a:link,
 .footer-center a:visited {
   display: block;
-  color: var(--grey3);
+  color: var(--white);
   font-size: 1.4rem;
   transition: 0.6s;
 }
 
 .footer-center a:hover {
-  color: var(--grey2);
+  color: var(--gold);
 }
 
 .footer-center p,
@@ -752,8 +753,8 @@ Footer
   margin-bottom: 1rem;
 }
 
-.footer .payment-methods {
-  margin-top: 2rem;
+.footer-center span {
+  margin-right: 1rem;
 }
 
 @media only screen and (max-width: 998px) {
@@ -768,49 +769,4 @@ Footer
     grid-template-columns: 1fr;
     row-gap: 2rem;
   }
-}
-
-/*
-=========================
-MENU Page 
-+++++++++++++++++++++++++
-*/
-.menu-navigation {
-  background-color: var(--grey4);
-}
-section .menu-container {
-  margin: 5rem auto;
-  position: relative;
-  color: var(--text1);
-}
-
-.menu-container h1 {
-  padding: 2rem;
-  font-size: 5rem;
-  color: var(--text1);
-}
-
-.menu-container ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.ourmenu h2 {
-  margin-top: 3rem;
-  padding: 1rem;
-  font-size: 3rem;
-}
-
-.ourmenu ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-  text-align: start;
-}
-
-.ourmenu ul li {
-  max-width: 30rem;
-  margin: 1rem;
 }

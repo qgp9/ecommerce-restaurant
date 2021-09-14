@@ -4,16 +4,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* =========== Browser Reset ============ */
 :root {
   /* Color Variables */
-  --primary: #ffc400;
-  --text1: #333;
-  --text2: #a9a9a9;
+  --gold: rgba(175, 149, 74, 1);
+  --text1: #1e140a;
+  --text2: rgb(250, 249, 249);
   --grey1: rgb(107, 113, 119);
-  --grey2: rgb(255, 255, 255);
-  --grey3: rgb(251, 247, 237);
-  --grey4: #262626;
+  --grey2: rgb(251, 247, 237);
+  --grey3: #262626;
   --white: #fff;
   --shadow-300: 0 5px 5px rgba(0, 0, 0, 0.3);
   --shadow-500: 0 5px 5px rgba(0, 0, 0, 0.5);
@@ -42,10 +43,15 @@ body {
   background-color: var(--white);
   color: var(--white);
   /*overflow: hidden;*/
+  background-image: url("/images/M22 된장찌개.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 0;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 li {
@@ -57,7 +63,7 @@ video {
   width: 100%;
   height: 100%;
 }
-
+/* =========== Custom Classes ============ */
 .d-flex {
   display: flex;
   align-items: center;
@@ -69,18 +75,47 @@ video {
 }
 
 .section {
+  margin: 5rem 0;
   padding: 10rem 0 5rem;
   overflow: hidden;
 }
 
 .title {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .title h1 {
-  font-size: 4rem;
-  color: var(--text1);
+  font-size: 3rem;
+  color: var(--text2);
+  text-shadow: 5px 5px 0px rgba(37, 59, 112, 0.2);
+  text-transform: uppercase;
 }
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--gold);
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  transition: var(--transition-300);
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-500);
+  transform: translateY(-5px);
+  opacity: 0.85;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 1200px) {
   .container {
     padding: 0 3rem;
@@ -96,25 +131,33 @@ video {
     margin: 5rem 0;
     padding: 5rem 0 0;
   }
+
+  .btn {
+    font-size: 1.5rem;
+  }
 }
+
+/* =========== Navigation ============ */
 .header {
   position: relative;
   width: 100%;
+  height: 7rem;
+  z-index: 0;
 }
 
-.menu-navigation {
+.navigation {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 500;
-  padding: 3rem;
+  padding: 1rem 0;
 }
 
 .nav {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
   justify-content: space-between;
 }
 
@@ -125,7 +168,8 @@ video {
 
 .logo h1 {
   font-size: 3rem;
-  color: var(--white);
+  color: var(--text2);
+  font-family: "MedievalSharp", cursive;
 }
 
 .nav-item:not(:last-child) {
@@ -134,19 +178,32 @@ video {
 
 .nav-link {
   display: inline-block;
-  color: var(--white);
+  color: var(--text2);
   width: 3.5rem;
   height: 3.5rem;
   padding: 0.4rem;
+  position: relative;
 }
 
 .nav-item i {
   font-size: 3rem;
-  color: rgb(253, 251, 251);
+  color: var(--text2);
+}
+
+.nav-link i:hover {
+  transform: scale(1.5);
 }
 
 .nav-link img {
   border-radius: 50%;
+}
+
+.nav-link span {
+  display: none;
+}
+
+.nav-link img:hover {
+  transform: scale(1.5);
 }
 
 @media only screen and (max-width: 540px) {
@@ -164,8 +221,7 @@ video {
   }
 
   .logo h1 {
-    font-size: 2rem;
-    color: var(--white);
+    font-size: 2.5rem;
   }
 
   .nav-item:not(:last-child) {
@@ -173,14 +229,27 @@ video {
   }
 
   .nav-link {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.3rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
   }
 
   .nav-item i {
-    font-size: 2rem;
-    color: white;
+    font-size: 2.5rem;
+    color: var(--gold);
+  }
+
+  .nav-link i:hover {
+    transform: scale(1.3);
+  }
+
+  .nav-item img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nav-link img:hover {
+    transform: scale(1.3);
   }
 }
 
@@ -189,55 +258,63 @@ video {
 MENU Page 
 +++++++++++++++++++++++++
 */
-.menu-navigation {
-  background-color: var(--grey4);
-}
-.menu-container {
+#menu {
   margin: 5rem auto;
   position: relative;
-  color: var(--text1);
+  color: var(--text2);
 }
 
-.menu-container h1 {
+#menu h1 {
   padding: 2rem;
-  font-size: 5rem;
-  color: var(--text1);
-}
-
-.menu-container ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.ourmenu h2 {
-  margin-top: 3rem;
-  padding: 1rem;
   font-size: 3rem;
 }
 
-.ourmenu ul {
+#menu ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.menu .list {
+  background: rgba(71, 43, 1, 0.5);
+  padding: 5rem;
+}
+
+.menu .list h2 {
+  margin: 3rem 0;
+  padding: 0.5rem;
+  font-size: 3rem;
+  border-bottom: 1px solid white;
+}
+
+.menu .list ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
-  text-align: start;
 }
 
-.ourmenu ul li {
+.menu .list ul li {
   max-width: 30rem;
   margin: 1rem;
 }
 
-@media only screen and (max-width: 470px) {
-  .ourmenu ul {
+.menu .list ul li span {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 580px) {
+  .menu .list ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .menu .list {
+    padding: 1rem;
   }
 }
 
 @media only screen and (max-width: 425px) {
-  .ourmenu ul {
+  .menu .list ul {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -250,13 +327,10 @@ Footer
 */
 
 .footer {
-  background-color: var(--grey4);
+  background-color: var(--grey3);
   padding: 3rem 1rem;
   line-height: 2rem;
-}
-
-.footer-center span {
-  margin-right: 1rem;
+  margin: 0;
 }
 
 .footer-container {
@@ -268,13 +342,13 @@ Footer
 .footer-center a:link,
 .footer-center a:visited {
   display: block;
-  color: var(--grey3);
+  color: var(--white);
   font-size: 1.4rem;
   transition: 0.6s;
 }
 
 .footer-center a:hover {
-  color: var(--grey2);
+  color: var(--gold);
 }
 
 .footer-center p,
@@ -289,8 +363,8 @@ Footer
   margin-bottom: 1rem;
 }
 
-.footer .payment-methods {
-  margin-top: 2rem;
+.footer-center span {
+  margin-right: 1rem;
 }
 
 @media only screen and (max-width: 998px) {
