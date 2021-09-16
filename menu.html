@@ -66,13 +66,19 @@
   <main>
     <section class="menu container" id="menu">
       <h1>Our Menu</h1>
+      <button id="enBtn" data-lang="en">ENG</button> 
+      <button id="fiBtn" data-lang="fi">| FIN</button>
       <ul class="menu list">
         <li class="menu-starter">
-            <h2>Starter</h2>
+            <h2 id="title" data-detect="title">Starter</h2>
             <ul>
               <li>
-                <h3>Kimchijeon 🌶 -- 8€</h3>
-                <p>Pancake with hot kimchi, onion and chili</p>
+                <h3 id="name" data-detect="name"></h3>
+                <p id="ingre" data-detect="ingre"></p>
+              </li>
+              <li>
+                <h3 id="name" data-detect="name">Kimchijeon 🌶 -- 8€</h3>
+                <p id="ingre" data-detect="ingre">Pancake with hot kimchi, onion and chili</p>
               </li>
               <li>
                 <h3>Yachaejeon <span>(VEGE.)</span> -- 8€</h3>
@@ -392,5 +398,7 @@
     </div>
   </footer>
   <!-- End Footer -->
+
+  <script src="./js/index.js"  type="text/javascript"></script>
 </body>
 </html>
