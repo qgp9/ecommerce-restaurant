@@ -66,10 +66,10 @@
   <main>
     <section class="menu container" id="menu">
       <h1>Our Menu</h1>
-      <button id="enBtn" data-lang="en">ENG</button> 
-      <button id="fiBtn" data-lang="fi">| FIN</button>
+      <button class="change-language" type="button">Change language</button> 
+      
       <ul class="menu list">
-        <li class="menu-starter">
+        <li class="menu-starter" lang="en" style="display: none;">
             <h2 id="title" data-detect="title">Starter</h2>
             <ul>
               <li>
@@ -399,6 +399,13 @@
   </footer>
   <!-- End Footer -->
 
-  <script src="./js/index.js"  type="text/javascript"></script>
+ 
+  <?if($_SESSION['language'] == 'fi'){?>
+    <script src="./js/lang_fi.js"></script>    
+<?}else{?>
+    <script src="./js/lang_en.js"></script>
+<?}?>
+<script src="./js/main.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
