@@ -303,8 +303,13 @@ MENU Page
   font-size: 1rem;
 }
 
-*[lang="fi"] {
-  text-align: left;
+.language-switcher {
+  display: flex;
+}
+
+.language-switcher li {
+  color: white;
+  margin-left: 1rem;
 }
 
 @media only screen and (max-width: 580px) {

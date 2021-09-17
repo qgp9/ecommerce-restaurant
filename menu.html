@@ -66,19 +66,19 @@
   <main>
     <section class="menu container" id="menu">
       <h1>Our Menu</h1>
-      <button class="change-language" type="button">Change language</button> 
+      <ul class="language-switcher">
+        <a href="#fi" onclick="myFunctionfi()"><li>FIN</li></a>
+        <a href="#en" onclick="myFunction()"><li>|  ENG</li></a>
+      </ul>
       
-      <ul class="menu list">
-        <li class="menu-starter" lang="en" style="display: none;">
-            <h2 id="title" data-detect="title">Starter</h2>
+      <div id="en">
+       <ul class="menu list">
+        <li class="menu-starter">
+            <h2 id="title">Starter</h2>
             <ul>
               <li>
-                <h3 id="name" data-detect="name"></h3>
-                <p id="ingre" data-detect="ingre"></p>
-              </li>
-              <li>
-                <h3 id="name" data-detect="name">Kimchijeon 🌶 -- 8€</h3>
-                <p id="ingre" data-detect="ingre">Pancake with hot kimchi, onion and chili</p>
+                <h3>Kimchijeon 🌶 -- 8€</h3>
+                <p>Pancake with hot kimchi, onion and chili</p>
               </li>
               <li>
                 <h3>Yachaejeon <span>(VEGE.)</span> -- 8€</h3>
@@ -356,6 +356,302 @@
           </div>
         </li>
        </ul>
+      </div>
+
+
+       <!-- Finnish list -->
+      <div id="fi" style="display: none">
+       <ul class="menu list">
+
+        <li class="menu-starter">
+            <h2 id="title">Aloittaja </h2>
+            <ul>
+              <li>
+                <h3> Kimchijeon 🌶 - 8 € </h3>
+                <p> Pannukakku kuumalla kimchillä, sipulilla ja chilillä </p>
+              </li>
+              <li>
+                <h3> Yachaejeon <span> (VEGE.) </span> - 8 € </h3>
+                <p> Pannukakku porkkanaa, kesäkurpitsaa, sipulia ja kevätsipulia </p>
+              </li>
+              <li>
+                <h3> Meren antimet - <span> 5 kpl/</span> 6 € </h3>
+                <p> Kalmari, katkarapu, kaali, sipuli, muna, osterikastike </p>
+              </li>
+              <li>
+                <h3> Kasvis nyytit <span> (VEGE.) </span> - <span> 10 kpl/</span> 12 € </h3>
+                <p> Kaali, purjo, sipuli, tofu </p>
+              </li>
+              <li>
+                <h3> Japche <span> (VEGE.) </span> - 7 € </h3>
+                <p> Lasinuudeli soijakastikkeella, porkkana, sipuli, vihreä sipuli, sieni, seesami </p>
+              </li>
+              <li>
+                <h3> Kurkku Kimchi <span> (VEGE.) </span> - 6 € </h3>
+                <p> Kurkku, porkkana, sipuli, chili, seesami </p>
+              </li>
+              <li>
+                <h3> Tofu Kimchi <span> (Gluteeniton) </span> - <span> 3 kpl/</span> 6 € </h3>
+                <p> Käsintehty tofu, kimchi, sipuli, chili, seesami </p>
+              </li>
+            </ul>
+        </li>
+        <!-- starter end-->
+        <li class="menu-main">
+          <h2> Pää </h2>
+          <div>
+            <h3> Mikä on Dolsot? </h3>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod iusto reprehenderit non impedit vero consequuntur. Voluptatibus miinus illo quis quibusdam! </p>
+          </div>
+          <ul>
+            <li>
+              <h3> Bulgogi dolsot bibimbap - 17,9 € </h3>
+              <p> Riisi, korealainen marinoitu naudanliha soijakastikkeella, porkkanat, kesäkurpitsa, kaali, idut, retiisi, merilevä, paistettu muna, seesami </p>
+            </li>
+            <li>
+              <h3> Mausteinen Pork dolsot bibimbap 🌶 - 17,9 € </h3>
+              <p> Riisi, korealainen marinoitu sianliha chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
+            </li>
+            <li>
+              <h3> Mausteinen Octopus dolsot bibimbap 🌶 - 17,9 € </h3>
+              <p> Riisi, korealainen marinoitu mustekala chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
+            </li>
+            <li>
+                <h3> Chicken dolsot bibimbap <span> (Gluteeniton) </span> - 17,9 € </h3>
+                <p> Riisi, kananrintakuutiot, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, seesami </p>
+            </li>
+            <li>
+                <h3> Tofu dolsot bibimbap <span> (VEGE. Gluteeniton) </span> - 17,9 € </h3>
+                <p> Riisi, tofu, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
+            </li>
+            <li>
+                <h3> Kasvis dolsot bibimbap <span> (VEGE. Gluteeniton) </span> - 17 € </h3>
+                <p> Riisi, porkkana, kesäkurpitsa, kaali, idut, retiisi, merilevä, seesami (paistettu muna) </p>
+            </li>
+            <li>
+              <h3> Bulgogi bibimbap - 15,9 € </h3>
+              <p> Riisi, korealainen marinoitu naudanliha soijakastikkeella, porkkanat, kesäkurpitsa, kaali, idut, retiisi, merilevä, paistettu muna, seesami </p>
+            </li>
+            <li>
+                <h3> Mausteinen porsaanliha 🌶 - 15,9 € </h3>
+                <p> Riisi, korealainen marinoitu sianliha chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
+            </li>
+            <li>
+                <h3> Mausteinen Octopus bibimbap 🌶 - 15,9 € </h3>
+                <p> Riisi, korealainen marinoitu mustekala chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
+            </li>
+            <li>
+                  <h3> Bibimbap -kana <span> (Gluteeniton) </span> - 15,9 € </h3>
+                  <p> Riisi, kananrintakuutiot, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, seesami </p>
+            </li>
+            <li>
+                  <h3> Tofu bibimbap <span> (VEGE. Gluteeniton) </span> - 15,9 € </h3>
+                  <p> Riisi, tofu, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
+            </li>
+            <li>
+                  <h3> Kasvisruoho <span> (VEGE. Gluteeniton) </span> - 15 € </h3>
+                  <p> Riisi, porkkana, kesäkurpitsa, kaali, idut, retiisi, merilevä, seesami (paistettu muna) </p>
+            </li>
+            <li>
+                <h3> Lohen avokado -ruokalappu - 16,9 € </h3>
+                <p> Riisi, porkkana, kesäkurpitsa, kaali, idut, retiisi, merilevä, seesami, (paistettu muna) </p>
+            </li>
+            <li>
+                <h3> Mausteinen kana ja riisipalloja 🌶 - 16,9 € </h3>
+                <p> Korealainen marinoitu kana chilitahnalla, porkkanat, sipuli, vihreä sipuli, kylmä, riisipallo merilevällä, seesami </p>
+            </li>
+            <li>
+                <h3> Mausteinen sianliha riisin kanssa 🌶 - 16,9 € </h3>
+                <p> Korealainen marinoitu sianliha chilipastalla, porkkanat, sipuli, vihreä sipuli, kylmä, seesami </p>
+            </li>
+            <li>
+                <h3> Mausteinen mustekala riisin kanssa 🌶 - 16,9 € </h3>
+                <p> Riisi, korealainen marinoitu mustekala chilitahnalla, porkkanat, sipuli, vihreä sipuli, kylmä, seesami </p>
+            </li>
+            <li>
+                <h3> KFC makealla chilikastikkeella - 18,5 € </h3>
+                <p> Luuton paistettu kana, salaatti, omenakastike, korealainen makea chilikastike, riisi, seesami, maapähkinä </p>
+            </li>
+            <li>
+                <h3> Kiellä paistettu kana - 18,5 € </h3>
+                <p> Paistettu kanansiipi, salaatti, omenakastike, korealainen makea chilikastike, seesami, maapähkinä </p>
+            </li>
+            <li>
+                <h3> Sianlihan kimchipata - 18 € </h3>
+                <p> kimchi, sianliha, tofu, sipuli, vihreä sipuli, valkosipuli, riisi </p>
+            </li>
+            <li>
+                <h3> Tonnikala Kimchipata - 18 € </h3>
+                <p> kimchi, tonnikala, tofu, sipuli, vihreä sipuli, valkosipuli, riisi </p>
+            </li>
+            <li>
+                <h3> Doenjong -pata - 17 € </h3>
+                <p> Soijapasta, tofu, sieni, sipuli, vihreä sipuli, kesäkurpitsa, kylmä, riisi </p>
+            </li>
+            <li>
+                <h3> Dolpan Bulgogi - <span> 180 g </span> 20,9 € </h3>
+                <p> Korealainen marinoitu naudanliha, jossa on soijakastiketta, porkkanaa, sieniä, sipulia, vihreää sipulia, salaattia, teriyaki -kastike, seesami, riisi </p>
+            </li>
+          </ul>
+        </li>
+        <!-- main end -->
+        <li class="menu-garnish">
+          <h2>Koristele</h2>
+          <ul>
+            <li><h3>Kimchi -- 6</h3></li>
+          </ul>
+        </li>
+        <!-- garnish end -->
+        <li class="menu-beverages">
+          <div class="drinks-list">
+            <h2>Juomat</h2>
+            <ul>
+              <li>
+                  <h3>Cola / Cola zero -- 3</h3>
+              </li>
+              <li>
+                  <h3>Sprite / Jaffa -- 3</h3>
+              </li>
+              <li>
+                  <h3>Non-alcoholic beer -- 5.5</h3>
+              </li>
+              <li>
+                  <h3>Ginger beer -- 5</h3>
+              </li>
+              <li>
+                  <h3>Orange juice -- 3.5</h3>
+              </li>
+              <li>
+                  <h3>Apple juice -- 3.5</h3>
+              </li>
+              <li>
+                  <h3>Sparkling water -- 2.5</h3>
+              </li>
+              <li>
+                  <h3>Spring water -- 2.5</h3>
+              </li>
+              <li>
+                  <h3>Coffee -- 2.5</h3>
+              </li>
+              <li>
+                  <h3>Green tea -- 5</h3>
+              </li>
+            </ul>
+            <h2>korealaisia juomia</h2>
+            <ul>
+              <li>
+                  <h3>BongBong Grape Juice <span>(grape juice)</span> -- 3</h3>
+              </li>
+              <li>
+                  <h3>Bae Pear Juice <span>(pear juice)</span> -- 3</h3>
+              </li>
+              <li>
+                  <h3>Sikhye <span>(Korean rice drink)</span>(Korean rice drink) -- 3</h3>
+              </li>
+              <li>
+                  <h3>Ginger tea -- 5</h3>
+              </li>
+              <li>
+                  <h3>Green plum tea <span>(Iced/hot)</span> -- 5</h3>
+              </li>
+              <li>
+                  <h3>Yuja tea <span>(Iced/hot)</span> -- 5</h3>
+              </li>
+            </ul>
+            <h2>Jälkiruoka</h2>
+            <ul>
+              <li>
+                  <h3>Jäätelö <span>suklaasiirapilla</span> -5</h3>
+              </li>
+            </ul>
+          </div>
+          <div class="alcohol-list">
+            <h2>Korean Alcohol</h2>
+            <ul>
+                <li>
+                    <h3>Soju</h3>
+                </li>
+                <li>
+                    <h3>Bomb Cocktail</h3>
+                </li>
+                <li>
+                    <h3>Makgeolli</h3>
+                </li>
+            </ul>
+
+            <h2>Beer</h2>
+            <ul>
+                <li>
+                    <h3>Asahi</h3>
+                </li>
+                <li>
+                    <h3>Karhu</h3>
+                </li>
+                <li>
+                    <h3>Ridgeway IPA</h3>
+                </li>
+                <li>
+                    <h3>Budvar</h3>
+                </li>
+            </ul>
+
+            <h2>Red Wine</h2>
+            <ul>
+                <li>
+                    <h3>Cono Sur</h3>
+                </li>
+                <li>
+                    <h3>Valpolicella Ripasso</h3>
+                </li>
+                <li>
+                    <h3>Alamos Malbec</h3>
+                </li>
+                <li>
+                    <h3>Zensa Rosso</h3>
+                </li>
+            </ul>
+
+            <h2>White Wine</h2>
+            <ul>
+                <li>
+                    <h3>Jean Biecher</h3>
+                </li>
+                <li>
+                    <h3>Triade</h3>
+                </li>
+                <li>
+                    <h3>Laroche</h3>
+                </li>
+            </ul>
+
+            <h2>Rose</h2>
+            <ul>
+                <li>
+                    <h3>Rinot Noir Rose</h3>
+                </li>
+            </ul>
+
+            <h2>Champagne</h2>
+            <ul>
+                <li>
+                    <h3>Henkell trocken</h3>
+                </li>
+                <li>
+                    <h3>Ballet</h3>
+                </li>
+                <li>
+                    <h3>Henkell trocken</h3>
+                </li>
+                <li>
+                    <h3>Ballet</h3>
+                </li>
+            </ul>
+          </div>
+        </li>
+        <!-- beverages end -->
+      </ul>
+      </div>
+      <!-- Finnish list End-->
        <a href="index.html#reservation" class="btn">Book a Table</a>
     </section>
   </main>
