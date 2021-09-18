@@ -309,7 +309,7 @@ MENU Page
 
 .language-switcher li {
   color: white;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 @media only screen and (max-width: 580px) {
