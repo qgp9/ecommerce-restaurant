@@ -415,6 +415,10 @@ video {
     width: 90%;
   }
 
+  .content span {
+    display: none;
+  }
+
   .content .btn {
     padding: 0.4rem 1rem;
     font-size: 1.3rem;
