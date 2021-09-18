@@ -397,13 +397,13 @@ video {
   }
 
   .content .center {
-    margin: 5rem auto;
+    margin: 3.5rem auto;
   }
 
   .content h1 {
     font-size: 3rem;
     line-height: 3.1rem;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .content h2 {
