@@ -416,7 +416,7 @@ video {
   }
 
   .content span {
-    display: none;
+    font-size: 1.3em;
   }
 
   .content .btn {
