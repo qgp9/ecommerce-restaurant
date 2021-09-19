@@ -313,12 +313,18 @@ MENU Page
 }
 
 .main-header {
-  display: flex;
   margin-bottom: 3rem;
 }
 
 .main-character {
   margin-right: 3rem;
+}
+
+.main-character img {
+  width: 80px;
+  height: 150px;
+  float: left;
+  margin-right: 1.5rem;
 }
 @media only screen and (max-width: 580px) {
   .menu .list ul {
