@@ -299,7 +299,7 @@ video {
   font-weight: 900;
   margin-bottom: 20px;
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
-  border-bottom: 1px solid white;
+  border-bottom: 0.7px solid white;
 }
 
 .content h2,
@@ -337,8 +337,7 @@ video {
   font-weight: 700;
   margin: 2rem;
   letter-spacing: 0.15rem;
-  border: 2px solid white;
-  border-radius: 0.5rem;
+  border: 1.7px solid white;
 }
 
 .content .btn::after {
@@ -447,32 +446,59 @@ Main
 }
 
 .menu .row-container {
-  max-width: 114rem;
   position: relative;
+  width: 100%;
+  height: 450px;
 }
 
 .menu .swiper-container {
-  width: 100%;
-  height: 100%;
+}
+
+.menu .swiper-wrapper {
+  position: relative;
+  margin: 3rem 0;
 }
 
 .menu .swiper-slide {
-  background-position: center;
-  background-size: cover;
+  position: relative;
   width: 300px;
-  height: 300px;
-  border: 3px solid white;
+  height: 420px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
-.menu .swiper-slide img {
-  display: block;
-  width: 100%;
-  z-index: 0;
+.menu .swiper-slide:hover {
+  height: 420px;
 }
 
-.menu .swiper-slide p {
-  z-index: 10;
-  color: white;
+.menu .swiper-slide .imgBx {
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu .swiper-slide .imgBx img {
+  border-radius: 4px;
+}
+
+.menu .swiper-slide .imgContent {
+  color: #111;
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.menu .swiper-slide:hover .imgContent {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
 }
 /*
 .custom-next,
