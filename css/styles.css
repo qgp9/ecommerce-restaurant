@@ -395,6 +395,10 @@ video {
     padding: 10px;
   }
 
+  .content .left {
+    display: none;
+  }
+
   .content .center {
     margin: 3.5rem auto;
   }
