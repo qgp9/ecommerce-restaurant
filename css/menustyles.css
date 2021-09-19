@@ -312,6 +312,14 @@ MENU Page
   margin-left: 0.5rem;
 }
 
+.main-header {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.main-character {
+  margin-right: 3rem;
+}
 @media only screen and (max-width: 580px) {
   .menu .list ul {
     display: grid;
