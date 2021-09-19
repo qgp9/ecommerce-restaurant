@@ -448,7 +448,7 @@ Main
 .menu .row-container {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 470px;
 }
 
 .menu .swiper-container {
@@ -457,21 +457,18 @@ Main
 .menu .swiper-wrapper {
   position: relative;
   margin: 3rem 0;
+  padding-bottom: 3rem;
 }
 
 .menu .swiper-slide {
   position: relative;
   width: 300px;
-  height: 420px;
-  background: #fff;
+  height: 410px;
+  background-color: var(--grey2);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-}
-
-.menu .swiper-slide:hover {
-  height: 420px;
 }
 
 .menu .swiper-slide .imgBx {
@@ -485,22 +482,24 @@ Main
 
 .menu .swiper-slide .imgContent {
   color: #111;
+  font-size: 1.3rem;
   position: relative;
-  margin-top: -140px;
+  margin-top: -10px;
   padding: 10px 15px;
   text-align: center;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   transition: 0.3s ease-in-out;
+  background-color: var(--grey2);
 }
-
+/*
 .menu .swiper-slide:hover .imgContent {
   visibility: visible;
   opacity: 1;
   margin-top: -40px;
   transition-delay: 0.3s;
 }
-/*
+
 .custom-next,
 .custom-prev {
   position: absolute;
@@ -568,7 +567,7 @@ Main
 
 .menu .explore {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 3rem;
 }
 
 @media (max-width: 1200px) {
