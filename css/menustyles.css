@@ -297,11 +297,6 @@ MENU Page
   margin: 1rem;
 }
 
-.menu .list .circle {
-  width: 300px;
-  height: 300px;
-}
-
 .menu .list ul li span {
   font-size: 1rem;
 }
@@ -329,6 +324,18 @@ MENU Page
   float: left;
   margin-right: 1.5rem;
 }
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+}
+
+.list-item h4 {
+  color: rgb(167, 6, 6);
+}
+
 @media only screen and (max-width: 580px) {
   .menu .list ul {
     display: grid;
