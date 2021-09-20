@@ -286,13 +286,17 @@ MENU Page
   border-bottom: 1px solid white;
 }
 
-.menu .list ul {
+.menu-starter ul,
+.menu-main ul,
+.menu-garnish ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
 }
 
-.menu .list ul li {
+.menu-starter ul li,
+.menu-main ul li,
+.menu-garnish ul li {
   max-width: 30rem;
   margin: 1rem;
 }
@@ -325,6 +329,16 @@ MENU Page
   margin-right: 1.5rem;
 }
 
+.menu-beverages ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem 3rem;
+}
+
+.menu-beverages ul li {
+  margin: 0;
+}
+
 .list-item {
   display: flex;
   justify-content: space-between;
@@ -353,6 +367,47 @@ MENU Page
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .menu .list h2 {
+    margin: 2rem 0;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+  }
+  .list-item {
+    width: 27rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .menu .list {
+    background: rgba(71, 43, 1, 0.5);
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  .menu .list h2 {
+    font-size: 2rem;
+  }
+
+  .menu .list h3 {
+    font-size: 1.3rem;
+  }
+
+  .menu .list h4,
+  .menu .list p {
+    font-size: 1rem;
+  }
+
+  .menu-starter ul li,
+  .menu-main ul li,
+  .menu-garnish ul li {
+    margin: 0.5rem;
+  }
+
+  .list-item {
+    width: 25rem;
+  }
+}
 /*
 ==========================================
 Footer
