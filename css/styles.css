@@ -758,6 +758,44 @@ Contact Us
   }
 }
 
+.banner {
+  position: relative;
+  background-color: var(--grey1);
+  height: 35rem;
+  margin-bottom: 0;
+}
+
+.banner .left {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 10%;
+  color: rgba(175, 149, 74, 1);
+}
+
+.banner .right {
+  position: absolute;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.banner h1 {
+  font-size: 5rem;
+  color: var(--black);
+}
+
+@media only screen and (max-width: 425px) {
+  .banner {
+    height: 30rem;
+    padding: 2rem;
+  }
+
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
 /*
 ==========================================
 Footer
