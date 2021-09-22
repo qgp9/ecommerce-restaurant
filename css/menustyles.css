@@ -301,10 +301,6 @@ MENU Page
   margin: 1rem;
 }
 
-.menu .list ul li span {
-  font-size: 1rem;
-}
-
 .language-switcher {
   display: flex;
 }
@@ -348,6 +344,11 @@ MENU Page
 
 .list-item h4 {
   color: white;
+  font-size: 1.3rem;
+}
+
+.menu .list ul li span {
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 580px) {
@@ -381,7 +382,7 @@ MENU Page
 @media only screen and (max-width: 320px) {
   .menu .list {
     background: rgba(71, 43, 1, 0.5);
-    padding: 0.5rem;
+    padding: 0.05rem;
     margin: 0;
   }
 
