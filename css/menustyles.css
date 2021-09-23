@@ -258,6 +258,22 @@ h4 {
   }
 }
 
+@media (max-width: 280px) {
+  .header .logo h1 {
+    font-size: 1.8rem;
+  }
+
+  .header .nav-item i {
+    font-size: 2rem;
+  }
+
+  .nav-link img {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.2rem;
+  }
+}
+
 /*
 =========================
 MENU Page 
@@ -270,7 +286,7 @@ MENU Page
 .language-switcher li a {
   color: white;
   margin-left: 0.5rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
 }
 
 #menu {
@@ -447,6 +463,11 @@ MENU Page
 }
 
 @media only screen and (max-width: 280px) {
+  .language-switcher li a {
+    color: white;
+    margin-left: 0.5rem;
+    letter-spacing: 0.1rem;
+  }
   .list-item {
     width: 22rem;
   }
@@ -513,5 +534,18 @@ Footer
   .footer-container {
     grid-template-columns: 1fr;
     row-gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  footer .container {
+    padding: 1.5rem 0.7rem;
+    line-height: 1.8rem;
+    margin: 0;
+  }
+
+  .footer-center p,
+  .footer-center a {
+    font-size: 1.3rem;
   }
 }
