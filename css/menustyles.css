@@ -275,7 +275,6 @@ MENU Page
 
 #menu {
   margin: 5rem auto;
-  position: relative;
   color: var(--text2);
 }
 
@@ -294,6 +293,7 @@ MENU Page
 .menu .list {
   background: rgba(71, 43, 1, 0.5);
   padding: 5rem;
+  width: 100%;
 }
 
 .menu .list h2 {
@@ -315,7 +315,6 @@ MENU Page
 .menu-starter ul li,
 .menu-main ul li,
 .menu-garnish ul li {
-  max-width: 30rem;
   margin: 1rem;
 }
 
@@ -348,7 +347,7 @@ MENU Page
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30rem;
+  max-width: 30rem;
 }
 
 .list-item h4 {
@@ -360,11 +359,30 @@ MENU Page
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .menu .list {
+    padding: 2rem;
+  }
+
+  .menu .list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .list-item h4 {
+    font-size: 1.1rem;
+  }
+}
+
 @media only screen and (max-width: 580px) {
   .menu .list ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .menu .list {
     padding: 1rem;
   }
