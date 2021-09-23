@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+
 /* =========== Browser Reset ============ */
 :root {
   /* Color Variables */
@@ -35,7 +36,7 @@ html {
 }
 
 body {
-  font-family: "Besley", serif;
+  font-family: "Poppins", serif;
   font-size: 1.6rem;
   font-weight: 400;
   background-color: var(--white);
@@ -79,13 +80,13 @@ video {
 }
 
 .title {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .title h1 {
   font-size: 3rem;
   color: var(--text2);
-  text-shadow: 5px 5px 0px rgba(37, 59, 112, 0.2);
+  text-shadow: var(--shadow-300);
   text-transform: uppercase;
 }
 
@@ -256,6 +257,16 @@ video {
 MENU Page 
 +++++++++++++++++++++++++
 */
+.language-switcher {
+  display: flex;
+}
+
+.language-switcher li a {
+  color: white;
+  margin-left: 0.5rem;
+  letter-spacing: 0.2rem;
+}
+
 #menu {
   margin: 5rem auto;
   position: relative;
@@ -299,15 +310,6 @@ MENU Page
 .menu-garnish ul li {
   max-width: 30rem;
   margin: 1rem;
-}
-
-.language-switcher {
-  display: flex;
-}
-
-.language-switcher li {
-  color: white;
-  margin-left: 0.5rem;
 }
 
 .main-header {
