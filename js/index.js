@@ -1,17 +1,9 @@
-function init() {
-  const loader = document.querySelector(".loader");
-  const main = document.querySelector(".main");
+let spinnerWrapper = document.querySelector(".spinner-wrapper");
 
-  setTimeout(() => {
-    loader.style.opacity = 0;
-    loader.style.display = "none";
-
-    main.style.display = "block";
-    setTimeout(() => (main.style.opacity = 1), 50);
-  }, 2000);
-}
-
-init();
+window.addEventListener("load", function () {
+  // spinnerWrapper.style.display = 'none';
+  spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+});
 
 function setLanguageEn() {
   const en = document.getElementById("en");
