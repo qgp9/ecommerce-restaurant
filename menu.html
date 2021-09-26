@@ -20,6 +20,12 @@
     <title>Manna ravintola in Helsinki</title>
 </head>
 <body>
+  <div class="loader">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <div class="main">
   <!-- Header -->
   <header class="header" id="header">
     <!-- Navigation -->
@@ -32,28 +38,28 @@
         </div>
         <ul class="nav-list d-flex">
           <li class="nav-item">
-            <a href="https://www.facebook.com/ravintolamanna" class="nav-link">
+            <a href="https://www.facebook.com/ravintolamanna" class="nav-link" target="_blank">
               <i class='bx bxl-facebook-square' ></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://www.instagram.com/ravintolamanna/" class="nav-link">
+            <a href="https://www.instagram.com/ravintolamanna/" class="nav-link" target="_blank">
               <i class='bx bxl-instagram' ></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g189934-d16883848-Reviews-Restaurant_Manna-Helsinki_Uusimaa.html" class="nav-link">
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g189934-d16883848-Reviews-Restaurant_Manna-Helsinki_Uusimaa.html" class="nav-link" target="_blank">
               <i class='bx bxl-trip-advisor' ></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://wolt.com/fi/fin/helsinki/restaurant/ravintola-manna" class="nav-link">
+            <a href="https://wolt.com/fi/fin/helsinki/restaurant/ravintola-manna" class="nav-link" target="_blank">
               <img src="./images/wolt.png" alt="wolt-online-order">
               <span>Wolt Online Order</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://www.foodora.fi/en/restaurant/s0vx/ravintola-manna" class="nav-link">
+            <a href="https://www.foodora.fi/en/restaurant/s0vx/ravintola-manna" class="nav-link" target="_blank">
               <img src="./images/foodora.png" alt="foodora-online-order">
               <span>Foodora Online Order</span>
             </a>
@@ -70,7 +76,8 @@
       </div>
       <ul class="language-switcher">
         <li><a href="#fi" onclick="setLanguageFi()">FIN</a></li>
-        <li><a href="#en" onclick="setLanguageEn()">| ENG</a></li>
+        <li> |</li>
+        <li><a href="#en" onclick="setLanguageEn()">ENG</a></li>
       </ul>
       
       <!-- English list -->
@@ -141,7 +148,7 @@
           <h2>Main</h2>
           <div class='main-header'>
             <div class="main-character">
-              <img src="./images/cook.png" alt="chef character with bibimbap">
+              <img src="./images/cook_man.png" alt="chef character with bibimbap">
             </div>
             <div class="main-content">
               <h3>What is 'Dolsot'?</h3>
@@ -338,6 +345,21 @@
         </li>
         <li class="menu-garnish">
             <h2>Garnish</h2>
+            <div class='garnish-header'>
+              <div class="garnish-character">
+                <img src="./images/cook_woman.png" alt="chef character with kimchi">
+              </div>
+              <div class="garnish-content">
+                <h3>What is 'Kimchi'?</h3>
+                <p>Kimchi is one of the most important dishes in Korean cuisine. The Korean term "Kimchi" refers to fermented vegetables, and encompasses salt and seasoned... </p>
+                <p>including gochugaru (Korean chili powder), spring onions, garlic, ginger, and jeotgal (salted seafood), etc.
+                  It is also used in a variety of soups and stews. It is eaten as a side dish with almost every Korean meal.
+                  There are hundreds of varieties of kimchi made with different vegetables as the main ingredients.
+                  Traditionally, winter kimchi, called kimjang, was stored in large earthenware fermentation vessels, called onggi, in the ground to prevent freezing during the winter months and to keep it cool enough to slow down the fermentation process during summer months.
+                  The vessels are also kept outdoors in special terraces called jangdokdae. In contemporary times, household kimchi refrigerators are more commonly used. [refer. WIKI]
+                </p>
+              </div>
+            </div>
             <ul>
                 <li>
                   <img src="./images/kimchi1.jpg" alt="Kimchi">
@@ -613,7 +635,7 @@
           <h2> Pää </h2>
           <div class='main-header'>
             <div class="main-character">
-              <img src="./images/cook.png" alt="">
+              <img src="./images/cook_man.png" alt="">
             </div>
             <div class="main-content">
               <h3> Mikä on Dolsot? </h3>
@@ -811,6 +833,21 @@
         <!-- main end -->
         <li class="menu-garnish">
           <h2>Koristele</h2>
+          <div class='garnish-header'>
+            <div class="garnish-character">
+              <img src="./images/cook_woman.png" alt="chef character with kimchi">
+            </div>
+            <div class="garnish-content">
+              <h3>What is 'Kimchi'?</h3>
+              <p>Kimchi is one of the most important dishes in Korean cuisine. The Korean term "Kimchi" refers to fermented vegetables, and encompasses salt and seasoned... </p>
+              <p>including gochugaru (Korean chili powder), spring onions, garlic, ginger, and jeotgal (salted seafood), etc.
+                It is also used in a variety of soups and stews. It is eaten as a side dish with almost every Korean meal.
+                There are hundreds of varieties of kimchi made with different vegetables as the main ingredients.
+                Traditionally, winter kimchi, called kimjang, was stored in large earthenware fermentation vessels, called onggi, in the ground to prevent freezing during the winter months and to keep it cool enough to slow down the fermentation process during summer months.
+                The vessels are also kept outdoors in special terraces called jangdokdae. In contemporary times, household kimchi refrigerators are more commonly used. [refer. WIKI]
+              </p>
+            </div>
+          </div>
           <ul>
             <li>
               <img src="./images/kimchi1.jpg" alt="">
@@ -1060,6 +1097,7 @@
     </div>
   </footer>
   <!-- End Footer -->
+  </div>
 
 <script src="./js/index.js"></script>
 </body>
