@@ -42,7 +42,7 @@ body {
   background-color: var(--white);
   color: var(--white);
   /*overflow: hidden;*/
-  background-image: url("/images/M22 된장찌개.jpg");
+  background-image: url("/images/m22_doenjangstew.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -595,6 +595,13 @@ Footer
 
 .footer-center span {
   margin-right: 1rem;
+}
+
+.footer-center h5 {
+  color: var(--grey1);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 998px) {

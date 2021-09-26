@@ -769,7 +769,7 @@ Reservation
 +++++++++++++++++
 */
 #reservation {
-  background-image: url("/images/back5.png");
+  background-image: url("/images/mannatable.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -830,15 +830,7 @@ Reservation
   font-weight: 500;
   font-size: 1.7rem;
 }
-/*
-.submit-btn {
-  margin-bottom: 2rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  border: none;
-  border-radius: 0.5rem;
-}
-*/
+
 .submit-btn {
   position: relative;
   text-align: center;
@@ -852,7 +844,7 @@ Reservation
 
 @media (max-width: 567px) {
   #reservation {
-    background-image: url("/images/back4.png");
+    background-image: url("/images/mannatable_small.png");
   }
   .reservation form {
     width: 90%;
@@ -1049,6 +1041,13 @@ Footer
 
 .footer-center span {
   margin-right: 1rem;
+}
+
+.footer-center h5 {
+  color: var(--grey1);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 998px) {
