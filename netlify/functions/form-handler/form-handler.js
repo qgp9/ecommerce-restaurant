@@ -1,5 +1,5 @@
-const querystring = require("querystring");
-const nodemailer = require('nodemailer');
+const querystring = require("querystring")
+const nodemailer = require('nodemailer')
 const _ = require('lodash')
 
 if (!process.env.NETLIFY) {
@@ -36,16 +36,36 @@ async function addToSheets(data) {
   }
 }
 
+
+
 async function sendMail(data) {
-  let transporter = nodemailer.createTransport({
+  // Configure transporter
+  let transportConf = {
     host: process.env.SMTP_SERVER,
     port: process.env.SMTP_PORT,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS
-    }
-  })
+  }
 
+  if (process.env.SMTP_SECURE)
+    transportConf.secure = true
+
+  if (process.env.OAUTH_CLIENT_ID) {
+    transportConf = {
+      ...transportConf,
+      service: 'gmail',
+      secure: 'true',
+      auth: {
+        type: 'OAuth2',
+        user: process.env.OAUTH_USER,
+        clientId: process.env.OAUTH_CLIENT_ID,
+        clientSecret: process.env.OAUTH_CLIENT_SECRET,
+        refreshToken: process.env.OAUTH_REFRESH_TOKEN
+      }
+    }
+  }
+
+  let transporter = nodemailer.createTransport(transportConf)
+
+  // configure message
   const subject = '[Manna] Your reservation has been recorded '
   const text = `Dear ${data.name}
     Your reservation has been recorded.
@@ -62,11 +82,14 @@ async function sendMail(data) {
     Manna
   `
   const mailOptions = {
-    from: 'admin@pal9.cyou',
+    from: process.env.EMAIL_FROM,
     to: data.email,
+    cc: process.env.EMAIL_FROM,
     subject,
     text
   }
+
+  // Send email
   try {
     await transporter.sendMail(mailOptions)
     return { err: null }
@@ -85,6 +108,7 @@ exports.handler = async (event, context) => {
   } catch (e) {
 
   }
+  // parse data
   const params = querystring.parse(event.body);
   const fields = ['name', 'phone', 'email', 'party', 'date', 'time']
   const data = _.pick(params, fields)
@@ -93,12 +117,12 @@ exports.handler = async (event, context) => {
     res = await sendMail(data)
   if (!res.err)
     res = await addToSheets(data)
-  
+
   if (res.err) {
     console.log(res.err)
     return {
       statusCode: 500,
-      err,
+      err: res.err,
       body: '500 Internal Server Error'
     }
   }
