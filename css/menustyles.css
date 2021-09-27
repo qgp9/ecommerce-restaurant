@@ -42,7 +42,7 @@ body {
   background-color: var(--white);
   color: var(--white);
   /*overflow: hidden;*/
-  background-image: url("/images/M22 된장찌개.jpg");
+  background-image: url("/images/m22_doenjangstew.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -139,6 +139,63 @@ h4 {
 
   .btn {
     font-size: 1.5rem;
+  }
+}
+
+/*
+======================
+Loader
+++++++++++++++++++++++
+*/
+.spinner-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--grey2);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.spinner:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    #f9fd05 0%,
+    rgba(175, 149, 74, 1) 100%
+  );
+  animation: spin 0.5s infinite linear;
+}
+.spinner:after {
+  width: 90%;
+  height: 90%;
+  background-color: var(--grey2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -272,6 +329,10 @@ h4 {
     height: 2.5rem;
     padding: 0.2rem;
   }
+
+  .nav-link img:hover {
+    transform: scale(1.1);
+  }
 }
 
 /*
@@ -283,10 +344,20 @@ MENU Page
   display: flex;
 }
 
+.language-switcher li:not(:last-child) {
+  margin-left: 0.5rem;
+}
+
 .language-switcher li a {
   color: white;
+  font-weight: 600;
   margin-left: 0.5rem;
   letter-spacing: 0.15rem;
+}
+
+.language-switcher li a:hover {
+  transform: scale(1.1);
+  color: var(--gold);
 }
 
 #menu {
@@ -338,15 +409,18 @@ MENU Page
   margin-bottom: 3rem;
 }
 
-.main-character {
-  margin-right: 3rem;
+.main-character,
+.garnish-character {
+  margin-right: 1rem;
 }
 
-.main-character img {
-  width: 80px;
-  height: 130px;
+.main-character img,
+.garnish-character img {
+  width: 100px;
+  height: 200px;
   float: left;
-  margin-right: 1.5rem;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .menu-beverages ul {
@@ -521,6 +595,13 @@ Footer
 
 .footer-center span {
   margin-right: 1rem;
+}
+
+.footer-center h5 {
+  color: var(--grey1);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 998px) {
