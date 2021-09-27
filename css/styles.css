@@ -831,6 +831,10 @@ Reservation
   font-size: 1.7rem;
 }
 
+.reservation .note {
+  text-align: center;
+}
+
 .submit-btn {
   position: relative;
   text-align: center;
@@ -969,7 +973,7 @@ Banner gift-card
   color: var(--black);
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 540px) {
   .banner {
     height: 30rem;
     padding: 2rem;
@@ -977,6 +981,22 @@ Banner gift-card
 
   .banner h1 {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    height: 25rem;
+    padding: 2rem;
+  }
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+  .banner h3 {
+    font-size: 1.8rem;
+  }
+  .banner p {
+    font-size: 1.5rem;
   }
 }
 
