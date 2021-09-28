@@ -142,6 +142,7 @@ exports.handler = async (event, context) => {
                 Please do not hesitate to contact us at <strong>(+358)050-3445562</strong> if you have any questions about your reservation 
                 or if you have any special needs.
               </p>
+              <a href="https://mannaravintola.netlify.app">Go back to Manna</a>
             </div>
           </main>
         </body>
