@@ -124,18 +124,24 @@ exports.handler = async (event, context) => {
     statusCode: 200,
     body: `
       <html>
-        <body>
-          <header>
-            [Manna korean restaurant]
+        <body style="margin: 3rem">
+          <header style="color: red; margin: 0 auto">
+            <h3>[Manna korean restaurant]</h3>
           </header>
-          <main>
+          <main style="border: 1px solid red; padding: 2rem">
             <div>
-            Dear ${data.name}, Thank you for making a reservation. 
-            Please note that we will hold your table for 15 minutes from the time of your booking. 
-            If you are running more than 15 minutes late on the day, 
-            please give us a call and we will do everything we can to accommodate you.
-            Please do not hesitate to contact us at (+358)050-3445562 if you have any questions about your reservation 
-            or if you have any special needs.
+              Dear <em>${data.name}</em>, Thank you for making a reservation. 
+              <p>
+                Please note that we will hold your table for <strong>15 minutes</strong> from the time of your booking.
+              </p>
+              <p>
+                If you are running more than 15 minutes late on the day, 
+                please give us a call and we will do everything we can to accommodate you.
+              </p>
+              <p>
+                Please do not hesitate to contact us at <strong>(+358)050-3445562</strong> if you have any questions about your reservation 
+                or if you have any special needs.
+              </p>
             </div>
           </main>
         </body>
