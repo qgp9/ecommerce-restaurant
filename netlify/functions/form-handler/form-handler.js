@@ -64,9 +64,10 @@ async function sendMail(data) {
 
   // configure message
   const subject = "[Manna] Your reservation has been recorded ";
-  const text = `Dear ${data.name}
+  const text = `Dear ${data.name},
+    Thank you for making a reservation.
     Your reservation has been recorded.
-    I will contact you back for a verification
+    Please note that we will hold your table for 15 minutes from the time of your booking.
 
     Name: ${data.name}
     Email: ${data.email}
@@ -74,6 +75,8 @@ async function sendMail(data) {
     Party: ${data.party}
     Date: ${data.date}
     Time: ${data.time}
+
+    Please do not hesitate to contact us at (+358)050-3445562 if you have any questions about your reservation or if you have any special needs.
 
     Best Regards,
     Manna
@@ -124,7 +127,18 @@ exports.handler = async (event, context) => {
     statusCode: 200,
     body: `
       <html>
-        <body style="margin: 3rem">
+        <body style="margin: 3rem; backgroundColor: rgba(251, 247, 237);">
+          <div style="width: 100%; 
+                      height: 100%; 
+                      position: absolute; 
+                      backgroundColor: rgba(251, 247, 237);
+                      top: 0;
+                      left: 0;
+                      display: flex;
+                      alignItems: center;
+                      justifyContent: center;">
+            <div style="position: relative; width: 10rem; height: 10rem;">Loading...</div>
+          </div>
           <header style="color: red; margin: 0 auto">
             <h3>[Manna korean restaurant]</h3>
           </header>
