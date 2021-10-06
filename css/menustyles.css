@@ -39,14 +39,13 @@ body {
   font-family: "Poppins", serif;
   font-size: 1.6rem;
   font-weight: 400;
-  background-color: var(--white);
-  color: var(--white);
-  /*overflow: hidden;*/
-  background-image: url("/images/m22_doenjangstew.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: var(--white);
   background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+  background-image: url("/images/m22_doenjangstew.jpg");
 }
 
 a {
