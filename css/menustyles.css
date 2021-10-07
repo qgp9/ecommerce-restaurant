@@ -352,6 +352,7 @@ MENU Page
   font-weight: 600;
   margin-left: 0.5rem;
   letter-spacing: 0.15rem;
+  font-size: 2rem;
 }
 
 .language-switcher li a:hover {
@@ -367,6 +368,11 @@ MENU Page
 #menu h1 {
   padding: 2rem;
   font-size: 3rem;
+}
+
+.selection {
+  display: flex;
+  justify-content: space-between;
 }
 
 #menu ul li {

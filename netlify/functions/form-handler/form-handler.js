@@ -63,11 +63,10 @@ async function sendMail(data) {
   let transporter = nodemailer.createTransport(transportConf);
 
   // configure message
-  const subject = "[Manna] Your reservation has been recorded ";
+  const subject = "[Manna] Your reservation has been recorded.";
   const text = `Dear ${data.name},
     Thank you for making a reservation.
     Your reservation has been recorded.
-    Please note that we will hold your table for 15 minutes from the time of your booking.
 
     Name: ${data.name}
     Email: ${data.email}
@@ -76,6 +75,8 @@ async function sendMail(data) {
     Date: ${data.date}
     Time: ${data.time}
 
+    Please note that we will hold your table for 15 minutes from the time of your booking.
+    If you are running more than 15 minutes late on the day, please give us a call and we will do everything we can to accommodate you.
     Please do not hesitate to contact us at (+358)050-3445562 if you have any questions about your reservation or if you have any special needs.
 
     Best Regards,
@@ -127,24 +128,13 @@ exports.handler = async (event, context) => {
     statusCode: 200,
     body: `
       <html>
-        <body style="margin: 3rem; backgroundColor: rgba(251, 247, 237);">
-          <div style="width: 100%; 
-                      height: 100%; 
-                      position: absolute; 
-                      backgroundColor: rgba(251, 247, 237);
-                      top: 0;
-                      left: 0;
-                      display: flex;
-                      alignItems: center;
-                      justifyContent: center;">
-            <div style="position: relative; width: 10rem; height: 10rem;">Loading...</div>
-          </div>
-          <header style="color: red; margin: 0 auto">
+        <body style="margin: 3rem; backgroundColor: rgb(251, 247, 237);">
+          <header style="color: rgba(175, 149, 74, 1); margin: 0 auto;">
             <h3>[Manna korean restaurant]</h3>
           </header>
-          <main style="border: 1px solid red; padding: 2rem">
+          <main style="border: 1px solid red; padding: 2rem;">
             <div>
-              Dear <em>${data.name}</em>, Thank you for making a reservation. 
+              Dear <strong>${data.name}</strong>, Thank you for making a reservation. 
               <p>
                 Please note that we will hold your table for <strong>15 minutes</strong> from the time of your booking.
               </p>
@@ -156,7 +146,11 @@ exports.handler = async (event, context) => {
                 Please do not hesitate to contact us at <strong>(+358)050-3445562</strong> if you have any questions about your reservation 
                 or if you have any special needs.
               </p>
-              <a href="https://mannaravintola.netlify.app">Go back to Manna</a>
+              <div style="color:rgba(175, 149, 74, 1); text-decoration: none">
+                <a href="https://mannaravintola.netlify.app">
+                  <p style="color:rgba(175, 149, 74, 1)">Go back to Manna</p>
+                </a>
+              </div>
             </div>
           </main>
         </body>

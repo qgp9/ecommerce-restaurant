@@ -82,11 +82,19 @@
       <div class="title">
         <h1>Our Menu</h1>
       </div>
-      <ul class="language-switcher">
-        <li><a href="#fi" onclick="setLanguageFi()">FIN</a></li>
-        <li> |</li>
-        <li><a href="#en" onclick="setLanguageEn()">ENG</a></li>
-      </ul>
+      <div class="selection">
+        <ul class="language-switcher">
+          <li><a href="#fi" onclick="setLanguageFi()">FIN</a></li>
+          <li> |</li>
+          <li><a href="#en" onclick="setLanguageEn()">ENG</a></li>
+        </ul>
+        <ul class="vege-gluten">
+          <li>(V) : VEGETARIAN</li>
+          <li>(G) : GLUTEN FREE</li>
+          <li>(Vg) : VEGAN </li>
+          <li style="color: green"> (V, G) : WHEN REQUESTED</li>
+        </ul>
+      </div>
       
       <!-- English list -->
       <div id="en">
@@ -97,7 +105,7 @@
               <li>
                 <img src="./images/vegetable pancake.jpg" alt="Kimchijeon kimchi pancake">
                 <div class="list-item">
-                  <h3>Kimchijeon 🌶 </h3>
+                  <h3>Kimchi-jeon 🌶 <span>(V)</span> </h3>
                   <h4>8€</h4>
                 </div>
                 <p>Pancake with hot kimchi, onion and chili</p>
@@ -105,10 +113,10 @@
               <li>
                 <img src="./images/vegetable pancake.jpg" alt="Yachaejeon">
                 <div class="list-item">
-                  <h3>Yachaejeon <span>(VEGE.)</span> </h3>
+                  <h3>Yachae-jeon <span>Vg</span> </h3>
                   <h4>8€</h4>
                 </div>
-                <p>Pancake with carrot, zucchini, onion and spring onion</p>
+                <p>Pancake with carrot, chinese cabbage, onion and spring onion</p>
               </li>
               <li>
                 <img src="./images/dumpling.jpg" alt="Seafood dumplings">
@@ -121,23 +129,15 @@
               <li>
                 <img src="./images/dumpling.jpg" alt="Vegetable dumplings">
                 <div class="list-item">
-                  <h3>Vegetable dumplings <span>(VEGE.)</span></h3>
+                  <h3>Vegetable dumplings <span>(Vg)</span></h3>
                   <h4><span>10PCS/</span>12€</h4>
                 </div>
                 <p>Cabbage, leek, onion, tofu</p>
               </li>
               <li>
-                <img src="./images/japche.jpg" alt="Japche korean glass noodle" >
-                <div class="list-item">
-                  <h3>Japche <span>(VEGE.)</span></h3>
-                  <h4>7€</h4>
-                </div>
-                <p>Glass noodle, soysauce, green onion, sesame, mushroom, carrot, onion</p>
-              </li>
-              <li>
                 <img src="./images/cucumber kimchi.jpg" alt="Cucumber Kimchi" >
                 <div class="list-item">
-                  <h3>Cucumber Kimchi <span>(VEGE.)</span> </h3>
+                  <h3>Cucumber Kimchi <span>(Vg)</span> </h3>
                   <h4>6€</h4>
                 </div>
                 <p>Cucumber, carrot, onion, chili, sesame</p>
@@ -145,10 +145,18 @@
               <li>
                 <img src="./images/tofukimchi.jpg" alt="Tofu Kimchi">
                 <div class="list-item">
-                  <h3>Tofu Kimchi <span>(GLUTEN FREE)</span></h3>
+                  <h3>Tofu Kimchi <span>(V,G)</span></h3>
                   <h4><span>3PCS/</span>6€</h4>
                 </div>
                 <p>Hand made tofu, kimchi, onion, chili, sesame</p>
+              </li>
+              <li>
+                <img src="./images/japche.jpg" alt="Japche korean glass noodle" >
+                <div class="list-item">
+                  <h3>Japche <span>(Vg)</span></h3>
+                  <h4>7€</h4>
+                </div>
+                <p>Glass noodle, soysauce, green onion, sesame, mushroom, carrot, onion</p>
               </li>
             </ul>
         </li>
@@ -199,7 +207,7 @@
             <li>
               <img src="./images/m1_bulgogi_dolsot.jpg" alt="Chicken dolsot bibimbap">
               <div class="list-item">
-                <h3>Chicken dolsot bibimbap <span>(GLUTEN FREE)</span></h3>
+                <h3>Chicken dolsot bibimbap <span>(G)</span></h3>
                 <h4>17.9€</h4>
               </div>
               <p>Rice, chicken breast cubes, carrots, zucchini, cabbage, bean sprouts, radish, sesame</p>
@@ -207,7 +215,7 @@
             <li>
               <img src="./images/m1_bulgogi_dolsot.jpg" alt="Tofu dolsot bibimbap">
               <div class="list-item">
-                <h3>Tofu dolsot bibimbap <span>(VEGE. GLUTEN FREE)</span> </h3>
+                <h3>Tofu dolsot bibimbap <span>(G),</span> <span>(Vg)</span></h3>
                 <h4>17.9€</h4>
               </div>
               <p>Rice, tofu, carrots, zucchini, cabbage, bean sprouts, radish, onion, green onion, sesame</p>
@@ -215,7 +223,7 @@
             <li>
               <img src="./images/m6_vegetable_dolsot.jpg" alt="Vegetable dolsot bibimbap">
               <div class="list-item">
-                <h3>Vegetable dolsot bibimbap <span>(VEGE. GLUTEN FREE)</span></h3>
+                <h3>Vegetable dolsot bibimbap <span>(G),</span> <span>(Vg | V)</span></h3>
                 <h4>17€</h4>
               </div>
                 <p>Rice, carrot, zucchini, cabbage, sprouts, radish, seawead, sesame, (fried egg)</p>
@@ -247,7 +255,7 @@
             <li>
               <img src="./images/m10_chicken_bibimbap.jpg" alt="Chicken bibimbap" >
               <div class="list-item">
-                <h3>Chicken bibimbap <span>(GLUTEN FREE)</span></h3>
+                <h3>Chicken bibimbap <span>(G)</span></h3>
                 <h4>15.9€</h4>
               </div>
               <p>Rice, chicken breast cubes, carrots, zucchini, cabbage, bean sprouts, radish, sesame</p>
@@ -255,7 +263,7 @@
             <li>
               <img src="./images/m11_tofu_bibimbap.jpg" alt="Tofu bibimbap">
               <div class="list-item">
-                <h3>Tofu bibimbap <span>(VEGE. GLUTEN FREE)</span></h3>
+                <h3>Tofu bibimbap <span>(G),</span> <span>(Vg)</span></h3>
                 <h4>15.9€</h4>
               </div>
               <p>Rice, tofu, carrots, zucchini, cabbage, bean sprouts, radish, onion, green onion, sesame</p>
@@ -263,7 +271,7 @@
             <li>
               <img src="./images/m8_pork.jpg" alt="Vegetable bibimbap" >
               <div class="list-item">
-                <h3>Vegetable bibimbap <span>(VEGE. GLUTEN FREE)</span></h3>
+                <h3>Vegetable bibimbap <span>(G),</span> <span>(Vg | V)</span></h3>
                 <h4>15€</h4>
               </div>
               <p>Rice, carrot, zucchini, cabbage, sprouts, radish, seawead, sesame, (fried egg)</p>
@@ -271,7 +279,7 @@
             <li>
               <img src="./images/m13_salmon.jpg" alt="Salmon avocado bibimbap">
               <div class="list-item">
-                <h3>Salmon avocado bibimbap </h3>
+                <h3>Salmon avocado bibimbap <span>(V)</span> <span style="color: green">(G)</span></h3>
                 <h4>16.9€</h4>
               </div>
               <p>Rice, carrot, zucchini, cabbage, sprouts, radish, seawead, sesame, (fried egg)</p>
@@ -303,10 +311,10 @@
             <li>
               <img src="./images/m17_kfc.jpg" alt="Korea chicken with sweet chili sauce">
               <div class="list-item">
-                <h3>Korean chicken with sweet chili sauce</h3>
+                <h3>Korean chicken with sweet and spicy sauce</h3>
                 <h4>18.5€</h4>
               </div>
-              <p>Boneless fried chicken, salad, apple sauce, korean sweet chili sauce, rice, sesame, peanut</p>
+              <p>Boneless fried chicken, salad, apple sauce, korean sweet and spicy sauce, rice, sesame, peanut</p>
             </li>
             <li>
               <img src="./images/m18_banban.jpg" alt="Ban Ban Fried Chicken">
@@ -314,7 +322,7 @@
                 <h3>Ban Ban Fried Chicken</h3>
                 <h4>18.5€</h4>
               </div>
-              <p>Fried chicken wing, salad, apple sauce, korean sweet chili sauce, sesame, peanut</p>
+              <p>Fried chicken wing, salad, apple sauce, korean sweet and spicy sauce, sesame, peanut</p>
             </li>
             <li>
               <img src="./images/m19_kimchistew.jpg" alt="Pork Kimchi stew">
@@ -335,10 +343,10 @@
             <li>
               <img src="./images/m22_doenjangstew.jpg" alt="Doenjong stew">
               <div class="list-item">
-                <h3>Doenjang stew</h3>
+                <h3>Doenjang stew <span style="color: green">(V)</span></h3>
                 <h4>17€</h4>
               </div>
-              <p>Soybean paste, tofu, mushroom, onion, green onion, zucchini, chilly, rice</p>
+              <p>Soybean paste, tofu, mushroom, onion, green onion, zucchini, chili, fish sauce, rice</p>
             </li>
             <li>
               <img src="./images/m23_dolpan_bulgogi.jpg" alt="Dolpan Bulgogi">
@@ -360,12 +368,12 @@
               <div class="garnish-content">
                 <h3>What is 'Kimchi'?</h3>
                 <p>Kimchi(kor.김치) is one of the most important dishes in Korean cuisine. The Korean term "Kimchi" refers to fermented vegetables, and encompasses salt and seasoned... </p>
-                <p>including gochugaru (Korean chili powder), spring onions, garlic, ginger, and jeotgal (salted seafood), etc.
+                <p>including gochugaru (Korean chili powder), spring onions, garlic, ginger, fish sauce and jeotgal (salted seafood), etc.
                   It is also used in a variety of soups and stews. It is eaten as a side dish with almost every Korean meal.
                   There are hundreds of varieties of kimchi made with different vegetables as the main ingredients.
                   Traditionally, winter kimchi, called kimjang, was stored in large earthenware fermentation vessels, called onggi, in the ground to prevent freezing during the winter months and to keep it cool enough to slow down the fermentation process during summer months.
                   The vessels are also kept outdoors in special terraces called jangdokdae. In contemporary times, household kimchi refrigerators are more commonly used. 
-                  <a href="https://en.wikipedia.org/wiki/Kimchi" target="_blank">[Read more...]</a>
+                  <a href="https://en.wikipedia.org/wiki/Kimchi" target="_blank" style="color: white">[Read more...]</a>
                 </p>
               </div>
             </div>
@@ -379,6 +387,7 @@
                 </li>
             </ul>
         </li>
+        <li><p style="color: orange">*More information about allergenes and special diets available from our staff upon request.</p></li>
         <li class="menu-beverages">
           <div class="drinks-list">
             <h2>Drinks</h2>
@@ -552,10 +561,10 @@
                 </li>
             </ul>
 
-            <h2>Rose</h2>
+            <h2>Rose Wine</h2>
             <ul>
                 <li>
-                    <h3>Rinot Noir Rose</h3>
+                    <h3>Pinot Noir Rose</h3>
                 </li>
             </ul>
 
@@ -574,493 +583,495 @@
       </div>
       <!-- English list End-->
 
-       <!-- Finnish list -->
+      <!-- Finnish list -->
       <div id="fi" style="display: none">
-       <ul class="menu list">
+        <ul class="menu list">
 
-        <li class="menu-starter">
-            <h2 id="title">Alkuruuat</h2>
-            <ul>
-              <li>
-                <img src="./images/vegetable pancake.jpg" alt="">
-                <div class="list-item">
-                  <h3>Kimchi-jeon 🌶 </h3>
-                  <h4>8€</h4>
-                </div>                
-                <p> Korealaistyylinen lettu kimchillä, sipulilla ja chilillä </p>
-              </li>
-              <li>
-                <img src="./images/vegetable pancake.jpg" alt="">
-                <div class="list-item">
-                  <h3>Yachae-jeon <span>(V)</span> </h3>
-                  <h4>8€</h4>
-                </div>                
-                <p> Korealaistyylinen lettu porkkanalla, kesäkurpitsalla, sipulilla ja kevätsipulilla </p>
-              </li>
-              <li>
-                <img src="./images/dumpling.jpg" alt="">
-                <div class="list-item">
-                  <h3>Seafood Dumplings</h3>
-                  <h4><span>5PCS/</span>6€</h4>
-                </div>
-                <p> Mustekala, katkarapu, kaali, sipuli, muna, osterikastike </p>
-              </li>
-              <li>
-                <img src="./images/dumpling.jpg" alt="">
-                <div class="list-item">
-                  <h3>Kasvis Dumplings <span>(V)</span></h3>
-                  <h4><span>10PCS/</span>12€</h4>
-                </div>
-                <p> Kaali, purjo, sipuli, tofu </p>
-              </li>
-              <li>
-                <img src="./images/japche.jpg" alt="" >
-                <div class="list-item">
-                  <h3>Japche <span>(VEGE.)</span></h3>
-                  <h4>7€</h4>
-                </div>                
-                <p> Bataattinuudeleita, sipulia, purjoa, porkkanaa, sieniä maustettuna seesami- ja soijakastikkeella </p>
-              </li>
-              <li>
-                <img src="./images/cucumber kimchi.jpg" alt="" >
-                <div class="list-item">
-                  <h3>Kurkku-kimchi <span>(V)</span> </h3>
-                  <h4>6€</h4>
-                </div>
-                <p> Kurkku, porkkana, sipuli, chili, seesaminsiemenet ja -öljy </p>
-              </li>
-              <li>
-                <img src="./images/tofukimchi.jpg" alt="">
-                <div class="list-item">
-                  <h3>Tofua ja kimchiä <span>(G)</span></h3>
-                  <h4><span>3PCS/</span>6€</h4>
-                </div>
-                <p> Käsintehtyä tofua kimchin, sipulin, chilin ja seesaminsiementen ja -öljyn kanssa </p>
-              </li>
-            </ul>
-        </li>
-        <!-- starter end-->
-        <li class="menu-main">
-          <h2> Pää </h2>
-          <div class='main-header'>
-            <div class="main-character">
-              <img src="./images/cook_man.png" alt="">
-            </div>
-            <div class="main-content">
-              <h3> Mikä on dolsot? </h3>
-              <p> Ravintolamme käyttää perinteisiä korealaisia kivestä tehtyja dolsot-kulhoja (kor. 돌솥). </p>
-              <p> Nämä kulhot on valmistettu gob-nimisestä kivestä, jota löytyy vain eteläkorealaiselta Jangsu-alueelta.
-                 Tulella kuumaksi lämmitetty kivikulho pitää ruoan lämpimänä, ja siitä myös irtoaa mineraaleja jotka auttavat vähentämään ravintoaineiden tuhoutumista ja parantavat ruoan makua.
-              </p>
-              <h3> Kuinka bibimbab syödään? </h3>
-              <p> 1. Annostele kastiketta maun mukaan kulhossa olevan riisin ja kasvisten päälle. </p>
-              <p> 2. Sekoita kaikki ainekset syömäpuikoilla. </p>
-              <p> 3. Herkuttele! </p>
-            </div>
-          </div>
-          <div class="main-list">
-           <ul>
-            <li>
-              <img src="./images/m1_bulgogi_dolsot.jpg" alt="Bulgogi dolsot bibimbap">
-              <div class="list-item">
-                <h3>Bulgogi dolsot bibimbap</h3>
-                <h4>17.9€</h4>
-              </div>
-              <p> Riisiä, naudanlihaa korealaisessa soijakastikemarinadissa, porkkanaa, kesäkurpitsaa, kaalia, ituja, retiisiä, merilevää, paistettu muna, seesaminsiemeniä ja -öljyä </p>
-            </li>
-            <li>
-              <img src="./images/m1_bulgogi_dolsot.jpg" alt="Spicy Pork dolsot bibimbap">
-              <div class="list-item">
-                <h3>Mausteinen Pork dolsot bibimbap 🌶</h3>
-                <h4>17.9€</h4>
-              </div>
-              <p> Riisiä, korealainen marinoitu sianliha chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m3_octopus_dolsot.jpg" alt="Spicy Octopus dolsot bibimbap">
-              <div class="list-item">
-                <h3>Mausteinen Octopus dolsot bibimbap 🌶</h3>
-                <h4>17.9€</h4>
-              </div>
-              <p> Riisi, korealainen marinoitu mustekala chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m1_bulgogi_dolsot.jpg" alt="Chicken dolsot bibimbap">
-              <div class="list-item">
-                <h3>Kana dolsot bibimbap <span>(Gluteeniton)</span></h3>
-                <h4>17.9€</h4>
-              </div>
-              <p> Riisi, kananrintakuutiot, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m1_bulgogi_dolsot.jpg" alt="Tofu dolsot bibimbap">
-              <div class="list-item">
-                <h3>Tofu dolsot bibimbap <span>(VEGE. Gluteeniton)</span> </h3>
-                <h4>17.9€</h4>
-              </div>
-              <p> Riisi, tofu, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m6_vegetable_dolsot.jpg" alt="Vegetable dolsot bibimbap">
-              <div class="list-item">
-                <h3>Kasvis dolsot bibimbap <span> (VEGE. Gluteeniton)</span></h3>
-                <h4>17€</h4>
-              </div>
-              <p> Riisi, porkkana, kesäkurpitsa, kaali, idut, retiisi, merilevä, seesami (paistettu muna) </p>
-            </li>
-            <li>
-              <img src="./images/m7_bulgogi.jpg" alt="Bulgogi bibimbap" >
-              <div class="list-item">
-                <h3>Bulgogi bibimbap</h3>
-                <h4>15.9€</h4>
-              </div>
-              <p> Riisi, korealainen marinoitu naudanliha soijakastikkeella, porkkanat, kesäkurpitsa, kaali, idut, retiisi, merilevä, paistettu muna, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m8_pork.jpg" alt="Spicy Pork bibimbap" >
-              <div class="list-item">
-                <h3>Mausteinen porsaanliha 🌶 </h3>
-                <h4>15.9€</h4>
-              </div>
-              <p> Riisi, korealainen marinoitu sianliha chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m9_octopus.jpg" alt="Spicy Octopus bibimbap" >
-              <div class="list-item">
-                <h3>Mausteinen Octopus bibimbap  🌶 </h3>
-                <h4>15.9€</h4>
-              </div>
-              <p> Riisi, korealainen marinoitu mustekala chilitahnalla, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m10_chicken_bibimbap.jpg" alt="Chicken bibimbap" >
-              <div class="list-item">
-                <h3>Kana bibimbap <span>(Gluteeniton)</span></h3>
-                <h4>15.9€</h4>
-              </div>
-              <p> Riisi, kananrintakuutiot, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m11_tofu_bibimbap.jpg" alt="Tofu bibimbap">
-              <div class="list-item">
-                <h3>Tofu bibimbap <span>(VEGE. Gluteeniton)</span></h3>
-                <h4>15.9€</h4>
-              </div>
-              <p> Riisi, tofu, porkkanat, kesäkurpitsa, kaali, pavunjuuret, retiisi, sipuli, vihreä sipuli, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m8_pork.jpg" alt="Vegetable bibimbap" >
-              <div class="list-item">
-                <h3> Kasvisruoho <span> (VEGE. Gluteeniton)</span></h3>
-                <h4>15€</h4>
-              </div>
-              <p> Riisi, porkkana, kesäkurpitsa, kaali, idut, retiisi, merilevä, seesami (paistettu muna) </p>
-            </li>
-            <li>
-              <img src="./images/m13_salmon.jpg" alt="Salmon avocado bibimbap">
-              <div class="list-item">
-                <h3>Lohen avocado bibimbap </h3>
-                <h4>16.9€</h4>
-              </div>
-              <p> Riisi, porkkana, kesäkurpitsa, kaali, idut, retiisi, merilevä, seesami, (paistettu muna) </p>
-            </li>
-            <li>
-              <img src="./images/m14_chicken_riceballs.jpg" alt="Spicy Chicken with rice balls">
-              <div class="list-item">
-                <h3>Mausteinen kana ja riisipalloja 🌶</h3>
-                <h4>16.9€</h4>
-              </div>
-              <p> Korealainen marinoitu kana chilitahnalla, porkkanat, sipuli, vihreä sipuli, kylmä, riisipallo merilevällä, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m15_pork_rice.jpg" alt="Spicy Pork with rice">
-              <div class="list-item">
-                <h3>Mausteinen sianliha riisin kanssa 🌶</h3>
-                <h4>16.9€</h4>
-              </div>
-              <p> Korealainen marinoitu sianliha chilipastalla, porkkanat, sipuli, vihreä sipuli, kylmä, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m16_octopus_rice.jpg" alt="Spicy Octopus with rice">
-              <div class="list-item">
-                <h3>Mausteinen mustekala riisin kanssa  🌶</h3>
-                <h4>16.9€</h4>
-              </div>
-              <p> Riisi, korealainen marinoitu mustekala chilitahnalla, porkkanat, sipuli, vihreä sipuli, kylmä, seesami </p>
-            </li>
-            <li>
-              <img src="./images/m17_kfc.jpg" alt="Korean chicken makealla chilikastikkeella">
-              <div class="list-item">
-                <h3>Korean chicken makealla chilikastikkeella</h3>
-                <h4>18.5€</h4>
-              </div>
-              <p> Luuton paistettu kana, salaatti, omenakastike, korealainen makea chilikastike, riisi, seesami, maapähkinä </p>
-            </li>
-            <li>
-              <img src="./images/m18_banban.jpg" alt="Ban Ban Fried Chicken">
-              <div class="list-item">
-                <h3>Kiellä paistettu kana</h3>
-                <h4>18.5€</h4>
-              </div>
-              <p> Paistettu kanansiipi, salaatti, omenakastike, korealainen makea chilikastike, seesami, maapähkinä </p>
-            </li>
-            <li>
-              <img src="./images/m19_kimchistew.jpg" alt="Pork Kimchi stew">
-              <div class="list-item">
-                <h3>Sianlihan kimchipata</h3>
-                <h4>18€</h4>
-              </div>
-              <p> kimchi, sianliha, tofu, sipuli, vihreä sipuli, valkosipuli, riisi </p>
-            </li>
-            <li>
-              <img src="./images/m19_kimchistew.jpg" alt="Tuna Kimchi stew">
-              <div class="list-item">
-                <h3>Tonnikala Kimchipata</h3>
-                <h4>18€</h4>
-              </div>
-              <p> kimchi, tonnikala, tofu, sipuli, vihreä sipuli, valkosipuli, riisi </p>
-            </li>
-            <li>
-              <img src="./images/m22_doenjangstew.jpg" alt="Doenjong stew">
-              <div class="list-item">
-                <h3>Doenjong-pata</h3>
-                <h4>17€</h4>
-              </div>
-              <p> Soijapasta, tofu, sieni, sipuli, vihreä sipuli, kesäkurpitsa, kylmä, riisi </p>
-            </li>
-            <li>
-              <img src="./images/m23_dolpan_bulgogi.jpg" alt="Dolpan Bulgogi">
-              <div class="list-item">
-                <h3>Dolpan Bulgogi</h3>
-                <h4><span>180g/ </span> 20.9€</h4>
-              </div>
-              <p> Korealainen marinoitu naudanliha, jossa on soijakastiketta, porkkanaa, sieniä, sipulia, vihreää sipulia, salaattia, teriyaki -kastike, seesami, riisi </p>
-            </li>
-           </ul>
-          </div>
-        </li>
-        <!-- main end -->
-        <li class="menu-garnish">
-          <h2>Koristele</h2>
-          <div class='garnish-header'>
-            <div class="garnish-character">
-              <img src="./images/cook_woman.png" alt="chef character with kimchi">
-            </div>
-            <div class="garnish-content">
-              <h3>What is 'Kimchi'?</h3>
-              <p>Kimchi (kor. 김치, myös gimchi tai kimchee)</p>
-              <p> on kiinankaalista tai muista kasviksista hapatettu korealainen ruokalaji. Tulisuuden ja punaisen värin kimchi saa mausteista, kuten chileistä, sipulista, valkosipulista, retiisistä ja inkivääristä. Kimchin kaltaisia ruokalajeja on tehty jo ensimmäisellä vuosituhannella jaa., ja nykymuodossaan se yleistyi 1600-luvulta lähtien. Kimchi on osa korealaista identiteettiä ja myös Etelä-Korean kansallisruoka. 
-                Kimchintekokausi eli kimjang siihen liittyvine tapoineen on osa Unescon aineettoman kulttuuriperinnön luetteloa.<a href="https://fi.wikipedia.org/wiki/Kimchi" target="_blank">[Read more...]</a>
-              </p>
-            </div>
-          </div>
-          <ul>
-            <li>
-              <img src="./images/kimchi1.jpg" alt="kimchi">
-              <div class="list-item">
-                <h3>Kimchi</h3>
-                <h4>6€</h4>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <!-- garnish end -->
-        <li class="menu-beverages">
-          <div class="drinks-list">
-            <h2>Juomat</h2>
-            <ul>
-              <li>
-                <div class="list-item">
-                  <h3>Cola / Cola zero</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Sprite / Jaffa</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Non-alcoholic beer</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Ginger beer</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Orange juice</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Apple juice</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Sparkling water</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Spring water</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Coffee</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Green tea</h3>
-                  <h4></h4>
-                </div>
-              </li>
-            </ul>
-
-            <h2>korealaisia juomia</h2>
-            <ul>
-              <li>
-                <div class="list-item">
-                  <h3>BongBong Juice <span>(grape juice)</span></h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Bae Pear Juice <span>(pear juice)</span></h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Sikhye <span>(Korean rice drink)</span></h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Ginger tea</h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Green plum tea <span>(Iced/hot)</span></h3>
-                  <h4></h4>
-                </div>
-              </li>
-              <li>
-                <div class="list-item">
-                  <h3>Yuja tea <span>(Iced/hot)</span></h3>
-                  <h4></h4>
-                </div>
-              </li>
-            </ul>
-            <h2>Jälkiruoka</h2>
-            <ul>
-              <li>
-                <div class="list-item">
-                  <h3>Jäätelö <span>suklaasiirapilla</span></h3>
-                  <h4></h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="alcohol-list">
-            <h2>Korean Alcohol</h2>
-            <ul>
+          <li class="menu-starter">
+              <h2 id="title">Alkuruoat</h2>
+              <ul>
                 <li>
-                    <h3>Soju</h3>
+                  <img src="./images/vegetable pancake.jpg" alt="">
+                  <div class="list-item">
+                    <h3>Kimchi-jeon 🌶 </h3>
+                    <h4>8€</h4>
+                  </div>                
+                  <p> Korealaistyylinen lettu kimchillä, sipulilla ja chilillä </p>
                 </li>
                 <li>
-                    <h3>Bomb Cocktail</h3>
+                  <img src="./images/vegetable pancake.jpg" alt="">
+                  <div class="list-item">
+                    <h3>Yachae-jeon <span>(V)</span> </h3>
+                    <h4>8€</h4>
+                  </div>                
+                  <p> Korealaistyylinen lettu porkkanalla, kesäkurpitsalla, sipulilla ja kevätsipulilla </p>
                 </li>
                 <li>
-                    <h3>Makgeolli</h3>
-                </li>
-            </ul>
-
-            <h2>Beer</h2>
-            <ul>
-                <li>
-                    <h3>Asahi</h3>
+                  <img src="./images/dumpling.jpg" alt="">
+                  <div class="list-item">
+                    <h3>Seafood Dumplings</h3>
+                    <h4><span>5 kpl/</span>6€</h4>
+                  </div>
+                  <p> Dumpling-nyytit mustekala-, katkarapu-, kaali-, sipuli-, muna- ja osterikastiketäytteellä</p>
                 </li>
                 <li>
-                    <h3>Karhu</h3>
+                  <img src="./images/dumpling.jpg" alt="">
+                  <div class="list-item">
+                    <h3>Kasvis Dumplings <span>(V)</span></h3>
+                    <h4><span>10 kpl/</span>12€</h4>
+                  </div>
+                  <p> Dumpling-nyytit kaali-, purjo-, sipuli- ja tofutäytteellä</p>
                 </li>
                 <li>
-                    <h3>Ridgeway IPA</h3>
+                  <img src="./images/japche.jpg" alt="" >
+                  <div class="list-item">
+                    <h3>Japche <span>(V)</span></h3>
+                    <h4>7€</h4>
+                  </div>                
+                  <p> Seesami- ja soijakastikkeella maustettuja paistettuja bataattinuudeleita ja sipulia, purjoa, porkkanaa ja sieniä</p>
                 </li>
                 <li>
-                    <h3>Budvar</h3>
-                </li>
-            </ul>
-
-            <h2>Red Wine</h2>
-            <ul>
-                <li>
-                    <h3>Cono Sur</h3>
+                  <img src="./images/cucumber kimchi.jpg" alt="" >
+                  <div class="list-item">
+                    <h3>Cucumber kimchi <span>(V)</span> </h3>
+                    <h4>6€</h4>
+                  </div>
+                  <p> Kurkkua, porkkanaa, sipulia, chiliä, seesaminsiemenet ja -öljy </p>
                 </li>
                 <li>
-                    <h3>Valpolicella Ripasso</h3>
+                  <img src="./images/tofukimchi.jpg" alt="">
+                  <div class="list-item">
+                    <h3>Tofua ja kimchiä <span>(G)</span></h3>
+                    <h4><span>3 PCS/</span>6€</h4>
+                  </div>
+                  <p> Käsintehtyä tofua tarjoiltuna kimchin, sipulin, chilin, seesaminsiementen ja -öljyn kanssa </p>
                 </li>
-                <li>
-                    <h3>Alamos Malbec</h3>
-                </li>
-                <li>
-                    <h3>Zensa Rosso</h3>
-                </li>
-            </ul>
-
-            <h2>White Wine</h2>
-            <ul>
-                <li>
-                    <h3>Jean Biecher</h3>
-                </li>
-                <li>
-                    <h3>Triade</h3>
-                </li>
-                <li>
-                    <h3>Laroche</h3>
-                </li>
-            </ul>
-
-            <h2>Rose</h2>
-            <ul>
-                <li>
-                    <h3>Rinot Noir Rose</h3>
-                </li>
-            </ul>
-
-            <h2>Champagne</h2>
-            <ul>
-                <li>
-                    <h3>Henkell trocken</h3>
-                </li>
-                <li>
-                    <h3>Ballet</h3>
-                </li>
-            </ul>
-          </div>
-        </li>
-        <!-- beverages end -->
+              </ul>
+          </li>
+   <!-- starter end-->
+   <li class="menu-main">
+     <h2> Pääruoat </h2>
+     <div class='main-header'>
+       <div class="main-character">
+         <img src="./images/cook_man.png" alt="">
+       </div>
+       <div class="main-content">
+         <h3> Mikä on dolsot? </h3>
+         <p> Ravintolamme käyttää perinteisiä korealaisia kivestä valmistettuja dolsot(kor. 돌솥)-kulhoja. </p>
+         <p> Kulhot on valmistettu gob-mineraalikivestä, jota löytyy vain eteläkorealaiselta Jangsu-alueelta.
+            Tulella kuumennettu kivikulho pitää ruoan lämpimänä, ja sen mineraalit auttavat vähentämään ravintoaineiden tuhoutumista sekä parantavat ruoan makua.
+         </p>
+         <h3> Kuinka bibimbap syödään? </h3>
+         <p> 1. Annostele kastiketta maun mukaan kulhossa olevan riisin ja kasvisten päälle. </p>
+         <p> 2. Sekoita kaikki ainekset syömäpuikoilla. </p>
+         <p> 3. Herkuttele! </p>
+       </div>
+     </div>
+     <div class="main-list">
+      <ul>
+       <li>
+         <img src="./images/m1_bulgogi_dolsot.jpg" alt="Bulgogi dolsot bibimbap">
+         <div class="list-item">
+           <h3>Bulgogi dolsot bibimbap</h3>
+           <h4>17.9€</h4>
+         </div>
+         <p> Riisiä, naudanlihaa korealaisessa soijakastikemarinadissa, porkkanaa, kesäkurpitsaa, kaalia, ituja, retiisiä, merilevää, paistettu muna, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m1_bulgogi_dolsot.jpg" alt="Spicy Pork dolsot bibimbap">
+         <div class="list-item">
+           <h3>Spicy pork dolsot bibimbap 🌶</h3>
+           <h4>17.9€</h4>
+         </div>
+         <p> Riisiä, sianlihaa korealaisessa chilimarinadissa, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, sipulia, purjoa, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m3_octopus_dolsot.jpg" alt="Spicy Octopus dolsot bibimbap">
+         <div class="list-item">
+           <h3>Spicy octopus dolsot bibimbap 🌶</h3>
+           <h4>17.9€</h4>
+         </div>>
+         <p> Riisiä, mustekalaa korealaisessa chilimarinadissa, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, sipulia, purjoa, seesaminsiemeniä ja -öljyä </p> 
+       </li>
+       <li>
+         <img src="./images/m1_bulgogi_dolsot.jpg" alt="Chicken dolsot bibimbap">
+         <div class="list-item">
+           <h3>Chicken dolsot bibimbap <span>(G)</span></h3>
+           <h4>17.9€</h4>
+         </div>
+         <p> Riisiä ja kananrintaa, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m1_bulgogi_dolsot.jpg" alt="Tofu dolsot bibimbap">
+         <div class="list-item">
+           <h3>Tofu dolsot bibimbap <span>(V, G)</span> </h3>
+           <h4>17.9€</h4>
+         </div>
+         <p> Riisiä ja tofua, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, sipulia, purjoa, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m6_vegetable_dolsot.jpg" alt="Vegetable dolsot bibimbap">
+         <div class="list-item">
+           <h3>Vegetable dolsot bibimbap <span> (V, G)</span></h3>
+           <h4>17€</h4>
+         </div>
+         <p> Riisiä, porkkanaa, kesäkurpitsaa, kaalia, ituja, retiisiä, merilevää, seesaminsiemeniä ja -öljyä, (paistettu muna) </p>
+       </li>
+       <li>
+         <img src="./images/m7_bulgogi.jpg" alt="Bulgogi bibimbap" >
+         <div class="list-item">
+           <h3>Bulgogi bibimbap</h3>
+           <h4>15.9€</h4>
+         </div>
+         <p> Riisi, korealainen marinoitu naudanliha soijakastikkeella, porkkanat, kesäkurpitsa, kaali, idut, retiisi, merilevä, paistettu muna, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m8_pork.jpg" alt="Spicy Pork bibimbap" >
+         <div class="list-item">
+           <h3>Spicy pork bibimbap 🌶 </h3>
+           <h4>15.9€</h4>
+         </div>
+         <p> Riisiä, sianlihaa korealaisessa chilimarinadissa, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, sipulia, purjoa, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m9_octopus.jpg" alt="Spicy Octopus bibimbap" >
+         <div class="list-item">
+           <h3>Spicy octopus bibimbap 🌶 </h3>
+           <h4>15.9€</h4>
+         </div>
+         <p> Riisiä, mustekalaa korealaisessa chilimarinadissa, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, sipulia, purjoa, seesaminsiemeniä ja -öljyä </p> 
+       </li>
+       <li>
+         <img src="./images/m10_chicken_bibimbap.jpg" alt="Chicken bibimbap" >
+         <div class="list-item">
+           <h3>Chicken  bibimbap <span>(G)</span></h3>
+           <h4>15.9€</h4>
+         </div>
+          <p> Riisiä ja kananrintaa, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m11_tofu_bibimbap.jpg" alt="Tofu bibimbap">
+         <div class="list-item">
+           <h3>Tofu bibimbap <span>(V, G)</span></h3>
+           <h4>15.9€</h4>
+         </div>
+         <p> Riisiä ja tofua, porkkanaa, kesäkurpitsaa, kaalia, pavunituja, retiisiä, sipulia, purjoa, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m8_pork.jpg" alt="Vegetable bibimbap" >
+         <div class="list-item">
+           <h3> Vegetable bibimbap <span> (V, G)</span></h3>
+           <h4>15€</h4>
+         </div>
+         <p> Riisiä, porkkanaa, kesäkurpitsaa, kaalia, ituja, retiisiä, merilevää, seesaminsiemeniä ja -öljyä, (paistettu muna) </p>
+       </li>
+       <li>
+         <img src="./images/m13_salmon.jpg" alt="Salmon avocado bibimbap">
+         <div class="list-item">
+           <h3>Lohi-avokado bibimbap </h3>
+           <h4>16.9€</h4>
+         </div>
+         <p> Riisiä, porkkanaa, kesäkurpitsaa, kaalia, ituja, retiisiä, merilevää, seesaminsiemeniä ja -öljyä, (paistettu muna) </p>
+       </li>
+       <li>
+         <img src="./images/m14_chicken_riceballs.jpg" alt="Spicy Chicken with rice balls">
+         <div class="list-item">
+           <h3>Spicy chicken with rice balls 🌶</h3>
+           <h4>16.9€</h4>
+         </div>
+         <p> Kanaa korealaisessa chilikastikkeessa, porkkanaa, sipulia, purjoa, kylmä, kim-merilevällä maustettuja riisipalloja, seesaminsiemeniä ja -öljyä </p>
+       </li>
+       <li>
+         <img src="./images/m15_pork_rice.jpg" alt="Spicy Pork with rice">
+         <div class="list-item">
+           <h3>Spicy pork with rice 🌶</h3>
+           <h4>16.9€</h4>
+         </div>
+         <p> Sianlihaa korealaisessa chilikastikkeessa, porkkanaa, sipulia, purjoa, kylmä, seesaminsiemeniä ja -öljyä, lisukeriisi </p>
+       </li>
+       <li>
+         <img src="./images/m16_octopus_rice.jpg" alt="Spicy Octopus with rice">
+         <div class="list-item">
+           <h3>Spicy octopuc with rice 🌶</h3>
+           <h4>16.9€</h4>
+         </div>
+         <p> Mustekalaa korealaisessa chilikastikkeessa, porkkanaa, sipulia, purjoa, kylmä, seesaminsiemeniä ja -öljyä, lisukeriisi </p>
+       </li>
+       <li>
+         <img src="./images/m17_kfc.jpg" alt="Korean chicken makealla chilikastikkeella">
+         <div class="list-item">
+           <h3>Korean Fried Chicken makeassa ja tulisessa kastikkeessa</h3>
+           <h4>18.5€</h4>
+         </div>
+         <p> Paistettua kanaa (ilman luita), korealainen makea chilikastike, salaatti omenakastikkeella, riisi, seesaminsiemeniä ja -öljyä, maapähkinää </p>
+       </li>
+       <li>
+         <img src="./images/m18_banban.jpg" alt="Ban Ban Fried Chicken">
+         <div class="list-item">
+           <h3>Ban Ban Fried Chicken</h3>
+           <h4>18.5€</h4>
+         </div>
+         <p> Paistettuja kanansiipiä, korealainen makea chilikastike, salaatti omenakastikeella, seesaminsiemeniä ja -öljyä, maapähkinää </p>
+       </li>
+       <li>
+         <img src="./images/m19_kimchistew.jpg" alt="Pork Kimchi stew">
+         <div class="list-item">
+           <h3>Kimchi stew with pork</h3>
+           <h4>18€</h4>
+         </div>
+         <p> Riisi ja kimchi-sianlihapata, jossa tofua, sipulia, purjoa, valkosipulia </p>
+       </li>
+       <li>
+         <img src="./images/m19_kimchistew.jpg" alt="Tuna Kimchi stew">
+         <div class="list-item">
+           <h3>Kimchi stew with tuna</h3>
+           <h4>18€</h4>
+         </div>
+         <p> Riisi ja kimchi-tonnikalapata, jossa tofua, sipulia, vihreä sipulia, valkosipulia </p>
+       </li>
+       <li>
+         <img src="./images/m22_doenjangstew.jpg" alt="Doenjong stew">
+         <div class="list-item">
+           <h3>Doenjang stew</h3>
+           <h4>17€</h4>
+         </div>
+         <p> Riisi ja korealainen soijapapupata, jossa tofua, sieniä, sipulia, purjoa, kesäkurpitsaa, kylmä </p>
+       </li>
+       <li>
+         <img src="./images/m23_dolpan_bulgogi.jpg" alt="Dolpan Bulgogi">
+         <div class="list-item">
+           <h3>Dolpan bulgogi</h3>
+           <h4><span>180g/ </span> 20.9€</h4>
+         </div>
+         <p> Naudanlihasuikaletta korealaisessa soijakastike-teriyakimarinadissa, porkkanaa, sieniä, sipulia, purjoa, seesaminsiemeniä ja -öljyä, riisi, päivän lisuke </p>
+       </li>
       </ul>
-      </div>
-      <!-- Finnish list End-->
+     </div>
+   </li>
+   <!-- main end -->
+   <li class="menu-garnish">
+     <h2>Lisukkeet</h2>
+     <div class='garnish-header'>
+       <div class="garnish-character">
+         <img src="./images/cook_woman.png" alt="chef character with kimchi">
+       </div>
+       <div class="garnish-content">
+         <h3>Mitä on kimchi?</h3>
+         <p>Kimchi (kor. 김치, myös gimchi tai kimchee)</p> on kiinankaalista tai muista kasviksista hapattamalla valmistettu lisukesalaatti. Tulisuuden ja punaisen värin kimchi saa mausteista, kuten chilistä, sipulista, valkosipulista, retiisistä ja inkivääristä. Kimchin kaltaisia ruokia on valmistettu jo ensimmäisellä vuosituhannella, ja nykymuodossaan tunnettu kimchi yleistyi 1600-luvulla. Kimchi on osa korealaista identiteettiä ja se on myös Etelä-Korean kansallisruoka. 
+           Kimchintekokausi eli kimjang ja siihen liittyvät tavat ja perinteet ovat osa Unescon aineettoman kulttuuriperinnön luetteloa.<a href="https://fi.wikipedia.org/wiki/Kimchi" target="_blank" style="color: white">[Lisää...]</a>
+         </p>
+       </div>
+     </div>
+     <ul>
+       <li>
+         <img src="./images/kimchi1.jpg" alt="kimchi">
+         <div class="list-item">
+           <h3>Kimchi</h3>
+           <h4>6€</h4>
+         </div>
+       </li>
+     </ul>
+   </li>
+   <!-- garnish end -->
+   <li class="menu-beverages">
+     <div class="drinks-list">
+       <h2>Juomat</h2>
+       <ul>
+         <li>
+           <div class="list-item">
+             <h3>Cola / Cola Zero</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Sprite / Jaffa</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Alkoholiton olut</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Ginger beer (alkoholiton)</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Appelsiinimehu</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Omenamehu</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Hiilihapollinen vesi</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Vesi</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Kahvi</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Tee</h3>
+             <h4></h4>
+           </div>
+         </li>
+       </ul>
+
+       <h2>Korealaisia juomia</h2>
+       <ul>
+         <li>
+           <div class="list-item">
+             <h3>BongBong-viinirypälejuoma<span></span></h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Bae-päärynäjuoma<span></span></h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Sikhye-riisijuoma<span></span></h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Inkivääritee</h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Luumutee<span>(kuuma/jää)</span></h3>
+             <h4></h4>
+           </div>
+         </li>
+         <li>
+           <div class="list-item">
+             <h3>Yuja-tee<span>(kuuma/jää)</span></h3>
+             <h4></h4>
+           </div>
+         </li>
+       </ul>
+       <h2>Jälkiruoat</h2>
+       <ul>
+         <li>
+           <div class="list-item">
+             <h3>Jäätelö <span>suklaasiirapilla</span></h3>
+             <h4></h4>
+           </div>
+         </li>
+       </ul>
+     </div>
+     <div class="alcohol-list">
+       <h2>Korealaiset alkoholijuomat</h2>
+       <ul>
+           <li>
+               <h3>Soju</h3>
+           </li>
+           <li>
+               <h3>Bomb Cocktail</h3>
+           </li>
+           <li>
+               <h3>Makgeolli</h3>
+           </li>
+       </ul>
+
+       <h2>Oluet</h2>
+       <ul>
+           <li>
+               <h3>Asahi</h3>
+           </li>
+           <li>
+               <h3>Karhu</h3>
+           </li>
+           <li>
+               <h3>Ridgeway IPA</h3>
+           </li>
+           <li>
+               <h3>Budvar</h3>
+           </li>
+       </ul>
+
+       <h2>Red Wine</h2>
+       <ul>
+           <li>
+               <h3>Cono Sur</h3>
+           </li>
+           <li>
+               <h3>Valpolicella Ripasso</h3>
+           </li>
+           <li>
+               <h3>Alamos Malbec</h3>
+           </li>
+           <li>
+               <h3>Zensa Rosso</h3>
+           </li>
+       </ul>
+
+       <h2>White Wine</h2>
+       <ul>
+           <li>
+               <h3>Jean Biecher</h3>
+           </li>
+           <li>
+               <h3>Triade</h3>
+           </li>
+           <li>
+               <h3>Laroche</h3>
+           </li>
+       </ul>
+
+       <h2>Rose</h2>
+       <ul>
+           <li>
+               <h3>Pinot Noir Rose</h3>
+           </li>
+       </ul>
+
+       <h2>Shampanjat</h2>
+       <ul>
+           <li>
+               <h3>Henkell trocken</h3>
+           </li>
+           <li>
+               <h3>Ballet</h3>
+           </li>
+       </ul>
+     </div>
+   </li>
+   <!-- beverages end -->
+ </ul>
+ </div>
+ <!-- Finnish list End-->
+
+
+</div>                
        <a href="index.html#reservation" class="btn">Book a Table</a>
     </section>
   </main>
