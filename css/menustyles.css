@@ -428,6 +428,10 @@ MENU Page
   margin-bottom: 0;
 }
 
+.main-character img {
+  margin-bottom: 1rem;
+}
+
 .menu-beverages ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -473,6 +477,10 @@ MENU Page
 @media only screen and (max-width: 768px) {
   .list-item h4 {
     font-size: 1.2rem;
+  }
+
+  .main-character img {
+    margin-bottom: 0;
   }
 }
 
