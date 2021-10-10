@@ -339,6 +339,28 @@ Loader
 MENU Page 
 +++++++++++++++++++++++++
 */
+#menu {
+  margin: 5rem auto;
+  color: var(--text2);
+}
+
+#menu h1 {
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+#menu ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.selection {
+  display: flex;
+  justify-content: space-between;
+}
+
 .language-switcher {
   display: flex;
 }
@@ -360,26 +382,8 @@ MENU Page
   color: var(--gold);
 }
 
-#menu {
-  margin: 5rem auto;
-  color: var(--text2);
-}
-
-#menu h1 {
-  padding: 2rem;
-  font-size: 3rem;
-}
-
-.selection {
-  display: flex;
-  justify-content: space-between;
-}
-
-#menu ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+.vege-gluten li {
+  font-size: 1.2rem;
 }
 
 .menu .list {
@@ -455,7 +459,7 @@ MENU Page
 }
 
 .menu .list ul li span {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -496,6 +500,10 @@ MENU Page
 }
 
 @media only screen and (max-width: 425px) {
+  .vege-gluten li {
+    font-size: 1rem;
+  }
+
   .menu .list ul {
     display: grid;
     grid-template-columns: 1fr;
