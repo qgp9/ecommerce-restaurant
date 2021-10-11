@@ -1,6 +1,10 @@
 /* =========== Fonts ============ */
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+
 /* =========== Browser Reset ============ */
 :root {
   /* Color Variables */
@@ -23,16 +27,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "Besley", serif;
+  font-family: "Poppins", serif;
   font-size: 1.6rem;
   font-weight: 400;
   background-color: var(--grey2);
@@ -45,7 +53,7 @@ a {
 }
 
 li {
-  list-style: none;
+  list-style: none !important;
 }
 
 img,
@@ -334,32 +342,33 @@ Loader
 /* =========== Video Slider ============ */
 .swiper-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
-.header .swiper-slide img,
-.header .swiper-slide video {
-  height: 100vh;
+.header .swiper-slide img {
   object-fit: cover;
-  opacity: 0.7;
+  opacity: 0.4;
+  width: 100%;
 }
 
 .header-wrapper {
-  background-color: rgb(70, 60, 3);
+  background-color: rgb(26, 22, 1);
+  height: 100%;
 }
 
 .header .content {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
   text-align: center;
   color: white;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .content h1 {
@@ -367,32 +376,12 @@ Loader
   font-weight: 900;
   margin-bottom: 20px;
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
-  border-bottom: 0.7px solid white;
 }
 
 .content h2,
 .content h3 {
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
   font-weight: 800;
-}
-
-.content p {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  font-weight: 500;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.content span {
-  font-weight: 700;
-}
-
-.content .link {
-  color: rgb(180, 148, 5);
-  background-color: rgb(224, 223, 222);
-  margin-left: 1rem;
-  opacity: 0.8;
 }
 
 .content .btn {
@@ -403,8 +392,8 @@ Loader
   text-decoration: none;
   color: var(--text2);
   font-weight: 700;
-  margin: 2rem;
-  border: 2px solid white;
+  margin: 1rem 0.1rem;
+  border: 1.5px solid white;
   border-radius: 0;
 }
 
@@ -417,23 +406,77 @@ Loader
   height: 120%;
 }
 
-@media (max-width: 1200px) {
+.center p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  width: 70%;
+  margin: 1rem auto;
+  font-family: "Barlow", sans-serif;
+}
+
+.content .bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.bottom .bottom-location {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1280px) {
   .content h1 {
     font-size: 4rem;
+    margin-bottom: 0;
   }
 
   .content p {
     font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+
+  .content .btn {
+    padding: 0.3rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 0 0.1rem;
+    border: 1.5px solid white;
+  }
+
+  .bottom h3 {
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 996px) {
+@media (max-width: 1024px) {
   .content h1 {
     font-size: 3.5rem;
   }
 
+  .content h2 {
+    font-size: 2rem;
+  }
+
   .content p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .content .bottom {
+    margin-top: 0.5rem;
+  }
+
+  .bottom h3 {
     font-size: 1.3rem;
+  }
+
+  .bottom p {
+    font-size: 1.1rem;
+  }
+
+  .bottom .bottom-location {
+    margin-top: 0.2rem;
   }
 }
 
@@ -442,18 +485,21 @@ Loader
     font-size: 3.2rem;
   }
 
-  .content p,
-  .content span,
-  .content li {
+  .content p {
     font-size: 1.2rem;
     line-height: 1.7rem;
+    padding: 0;
   }
 
   .content .btn {
     padding: 0.5rem 1.5rem;
     font-size: 1.3rem;
     font-weight: 600;
-    margin: 1rem;
+    margin: 1rem 0.1rem;
+  }
+
+  .bottom h3 {
+    font-size: 1.3rem;
   }
 }
 
@@ -464,59 +510,124 @@ Loader
     padding: 10px;
   }
 
-  .content .left {
-    display: none;
-  }
-
   .content .center {
-    margin: 3.5rem auto;
+    margin: 2rem auto;
+    margin-bottom: 0;
   }
 
   .content h1 {
     font-size: 3rem;
     line-height: 3.1rem;
-    padding: 1rem;
-  }
-
-  .content h2 {
-    font-size: 2rem;
   }
 
   .content p {
-    font-size: 1.3rem;
     width: 90%;
-  }
-
-  .content span {
-    display: none;
   }
 
   .content .btn {
     padding: 0.4rem 1rem;
     font-size: 1.3rem;
     font-weight: 500;
-    margin: 1rem;
+    margin: 1rem 0.1rem;
     letter-spacing: 0.1rem;
+  }
+
+  .bottom {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .bottom-hours p,
+  .bottom-location p {
+    width: 100%;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
+  .content .center {
+    margin: 0.5rem auto;
+  }
+
+  .bottom {
+    margin-bottom: 3rem;
+    margin-top: 0;
+  }
+
+  .bottom h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .content .center h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding: 0.1rem;
+  }
+
   .content .btn {
-    margin: 0.5rem;
+    margin: 0.1rem;
     letter-spacing: 0.05rem;
     font-size: 1rem;
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 411px) {
   .content .center h2 {
     font-size: 1.5rem;
   }
 
+  .content p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .bottom {
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  .bottom h3 {
+    font-size: 1.2rem;
+  }
+
+  .bottom p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .content .center h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .content .btn {
+    margin: 0.1rem;
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+  }
+
+  .content .bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
   .content .center h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
-    padding: 0.1rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .content .center h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .content .center p {
@@ -591,6 +702,7 @@ Main
   opacity: 1;
   transition: 0.3s ease-in-out;
   background-color: var(--grey2);
+  font-family: "Barlow", sans-serif;
 }
 /*
 .menu .swiper-slide:hover .imgContent {
@@ -833,6 +945,10 @@ Reservation
 
 .reservation .note {
   text-align: center;
+}
+
+.note h4 {
+  font-weight: 300;
 }
 
 .submit-btn {
