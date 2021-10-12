@@ -28,6 +28,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Change it from background-attachment: fixed For mobile ver.*/
+html::before {
+  content: "";
+  display: block;
+  background-image: url("/images/m22_doenjangstew.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -10 !important;
+}
 
 html {
   font-size: 62.5%;
@@ -39,15 +56,22 @@ body {
   font-family: "Poppins", serif;
   font-size: 1.6rem;
   font-weight: 400;
+  color: var(--white);
+}
+/* This makes blurred background image on Iphone.
+body {
+  font-family: "Poppins", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--white);
   background-attachment: fixed;
   background-color: var(--white);
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--white);
   background-image: url("/images/m22_doenjangstew.jpg");
 }
-
+*/
 a {
   text-decoration: none !important;
 }
