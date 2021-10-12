@@ -1,7 +1,4 @@
 /* =========== Fonts ============ */
-@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Titillium+Web:wght@200;300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
 
@@ -33,7 +30,7 @@ html::before {
   content: "";
   display: block;
   background-image: url("/images/m22_doenjangstew.jpg");
-  background-position: center;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -295,6 +292,7 @@ Loader
   .navigation {
     padding: 0;
   }
+
   .nav {
     max-width: 540px;
     padding: 1rem;
@@ -540,6 +538,7 @@ MENU Page
     padding: 0.5rem;
     font-size: 2.5rem;
   }
+
   .list-item {
     width: 27rem;
   }
