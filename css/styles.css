@@ -522,6 +522,7 @@ Loader
 
   .content p {
     width: 90%;
+    line-height: 1.3rem;
   }
 
   .content .btn {
@@ -540,6 +541,7 @@ Loader
   .bottom-hours p,
   .bottom-location p {
     width: 100%;
+    font-size: 1rem;
   }
 }
 
@@ -597,6 +599,23 @@ Loader
 }
 
 @media (max-width: 375px) {
+  .content .center h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .content .btn {
+    margin: 0.1rem;
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
   .content .center h2 {
     font-size: 1.5rem;
   }
