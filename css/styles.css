@@ -626,18 +626,16 @@ Loader
 
 @media (max-width: 280px) {
   .content .center h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .content .center h2 {
+    font-size: 1.2rem;
   }
 
   .content .center p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.1rem;
-    margin-top: 1rem;
-  }
-
-  .content .right h3 {
-    font-size: 1.2rem;
   }
 }
 
@@ -675,7 +673,7 @@ Main
 .menu .swiper-slide {
   position: relative;
   width: 300px;
-  height: 410px;
+  height: 430px;
   background-color: var(--grey2);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
@@ -689,21 +687,27 @@ Main
 }
 
 .menu .swiper-slide .imgBx img {
-  border-radius: 4px;
+  border-radius: 0.5rem;
 }
 
 .menu .swiper-slide .imgContent {
   color: #111;
   font-size: 1.3rem;
   position: relative;
-  margin-top: -10px;
-  padding: 10px 15px;
+  margin-top: 0;
+  padding: 2rem;
+  padding-bottom: 0.5rem;
   text-align: center;
   visibility: visible;
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   background-color: var(--grey2);
   font-family: "Barlow", sans-serif;
+  line-height: 1.5rem;
+}
+
+.imgContent h2 {
+  margin-bottom: 1rem;
 }
 /*
 .menu .swiper-slide:hover .imgContent {
@@ -824,8 +828,45 @@ Main
 }
 
 @media (max-width: 425px) {
+  .menu .custom-pagination {
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .menu .container {
+    padding: 0 1rem;
+  }
+
   .menu .title h1 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
+  }
+
+  .menu .swiper-wrapper {
+    margin: 1rem 0;
+    padding: 3rem 0;
+  }
+
+  .menu .swiper-slide {
+    width: 300px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu .swiper-slide .imgBx {
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu .swiper-slide .imgContent {
+    font-size: 1.2rem;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  .imgContent h2 {
+    font-size: 2rem;
+    line-height: 2.1rem;
   }
 }
 
@@ -845,10 +886,6 @@ Main
 
   .menu .title h1 {
     font-size: 2rem;
-  }
-
-  .menu .row-container {
-    height: 450px;
   }
 
   .menu .swiper-wrapper {
@@ -874,7 +911,7 @@ Main
 
   .menu .explore {
     text-align: center;
-    margin-top: 0;
+    margin-top: 1rem;
   }
 }
 
@@ -965,6 +1002,12 @@ Reservation
   font-family: "Besley", serif;
 }
 
+@media (max-width: 768px) {
+  .note h4 {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 567px) {
   #reservation {
     background-image: url("/images/mannatable_small.png");
@@ -972,6 +1015,10 @@ Reservation
 
   .reservation form {
     width: 90%;
+  }
+
+  .note h4 {
+    font-size: 1.2rem;
   }
 }
 
@@ -1142,12 +1189,22 @@ Banner gift-card
 }
 
 @media (max-width: 375px) {
-  .banner {
-    height: 60vh;
-  }
-
   .banner .left img {
     padding: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .banner .right h3 {
+    font-size: 1.5rem;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
   }
 }
 
