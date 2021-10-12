@@ -410,7 +410,7 @@ Loader
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 400;
-  width: 70%;
+  width: 80%;
   margin: 1rem auto;
   font-family: "Barlow", sans-serif;
 }
@@ -418,7 +418,12 @@ Loader
 .content .bottom {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin: 1rem;
+}
+
+.content .bottom p,
+.content .bottom h3 {
+  line-height: 2rem;
 }
 
 .bottom .bottom-location {
@@ -459,24 +464,26 @@ Loader
   }
 
   .content p {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
   }
 
   .content .bottom {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
-  .bottom h3 {
+  .content .bottom h3 {
     font-size: 1.3rem;
+    line-height: 1.5rem;
   }
 
-  .bottom p {
+  .content .bottom p {
     font-size: 1.1rem;
+    line-height: 1.2rem;
   }
 
   .bottom .bottom-location {
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -486,9 +493,10 @@ Loader
   }
 
   .content p {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
     padding: 0;
+    width: 80%;
   }
 
   .content .btn {
@@ -496,6 +504,10 @@ Loader
     font-size: 1.3rem;
     font-weight: 600;
     margin: 1rem 0.1rem;
+  }
+
+  .content .bottom p {
+    width: 100%;
   }
 
   .bottom h3 {
@@ -522,6 +534,7 @@ Loader
 
   .content p {
     width: 90%;
+    font-size: 1.2rem;
     line-height: 1.3rem;
   }
 
@@ -538,10 +551,15 @@ Loader
     margin: 0 auto;
   }
 
+  .bottom h3 {
+    line-height: 1.3rem;
+  }
+
   .bottom-hours p,
   .bottom-location p {
     width: 100%;
     font-size: 1rem;
+    line-height: 1.1rem;
   }
 }
 
@@ -557,6 +575,7 @@ Loader
 
   .bottom h3 {
     font-size: 1.4rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -591,10 +610,12 @@ Loader
 
   .bottom h3 {
     font-size: 1.1rem;
+    line-height: 1.2rem;
   }
 
   .bottom p {
     font-size: 0.8rem;
+    line-height: 1rem;
   }
 }
 
