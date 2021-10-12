@@ -572,7 +572,7 @@ Loader
   }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 414px) {
   .content .center h2 {
     font-size: 1.5rem;
   }
@@ -588,11 +588,11 @@ Loader
   }
 
   .bottom h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .bottom p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
