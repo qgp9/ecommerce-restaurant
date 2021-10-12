@@ -1068,29 +1068,25 @@ Contact Us
 Banner gift-card
 +++++++++++++++++
 */
-
 .banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
+  display: flex;
   background-color: var(--gold);
-  height: 55vh;
+  height: 40vh;
   margin-bottom: 0;
+  justify-content: center;
   padding: 3rem 0;
 }
 
 .banner .left img {
-  width: 500px;
-  height: 400px;
-  position: absolute;
-  top: 10%;
-  left: 20%;
+  padding: 0 3rem;
 }
 
 .banner .right {
-  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 10rem;
+  justify-content: center;
 }
 
 .banner h1 {
@@ -1098,70 +1094,75 @@ Banner gift-card
   color: var(--black);
 }
 
-@media only screen and (max-width: 1024px) {
-  .banner {
-    height: 45vh;
-  }
-
-  .banner .left img {
-    width: 400px;
-    height: 300px;
-    left: 5%;
-  }
-
-  .banner .right {
-    padding: 5rem;
-  }
-
-  .banner h1 {
-    font-size: 3.5rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .banner {
     height: 30vh;
   }
 
+  .banner .right {
+    padding-right: 1rem;
+  }
+
+  .banner .right h3 {
+    font-size: 1.8rem;
+  }
+
+  .banner h1 {
+    font-size: 2.7rem;
+  }
+
+  .banner p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 660px) {
+}
+
+@media (max-width: 425px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+  }
+
   .banner .left img {
-    width: 300px;
-    height: 200px;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .banner {
+    height: 75vh;
   }
 
   .banner .right {
-    padding: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    height: 60vh;
+  }
+
+  .banner .left img {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .banner .right h3 {
+    font-size: 1.5rem;
   }
 
   .banner h1 {
     font-size: 2.5rem;
   }
-}
 
-@media only screen and (max-width: 660px) {
-  .banner {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  .banner p {
+    font-size: 1rem;
   }
-
-  .banner .left img {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-  }
-
-  .banner .right {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    padding: 5rem;
-  }
-}
-
-@media (max-width: 375px) {
-}
-
-@media (max-width: 280px) {
 }
 /*
 ==========================================
