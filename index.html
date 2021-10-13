@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.all.min.js" integrity="sha256-2UHqQuWxFUpPFIsooOziz5fIn6wCyDgf3c9SthP8ZYk=" crossorigin="anonymous"></script>
     <!-- ======== StyleSheet ======= -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Manna korean restaurant in Helsinki</title>
@@ -259,7 +260,7 @@
           <div class="title">
             <h1>Reservation</h1>
           </div>
-          <form action="/.netlify/functions/form-handler" method="POST" target="_blank" class="book-info">
+          <form action="/.netlify/functions/form-handler" method="POST" target="_blank" class="book-info" id="reservation-form">
             <div class="inputBox">
               <input type="text" name="name" required>
               <h3>Full name</h3>

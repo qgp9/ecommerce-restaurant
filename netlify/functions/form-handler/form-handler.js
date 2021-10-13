@@ -43,9 +43,9 @@ async function sendMail(data) {
     port: process.env.SMTP_PORT,
   };
 
-  if (process.env.SMTP_SECURE) transportConf.secure = true;
+  transportConf.secure = process.env.SMTP_SECURE ? true : false;
 
-  if (process.env.OAUTH_CLIENT_ID) {
+  if (process.env.SMTP_SERVICE === 'gmail') {
     transportConf = {
       ...transportConf,
       service: "gmail",
@@ -58,7 +58,19 @@ async function sendMail(data) {
         refreshToken: process.env.OAUTH_REFRESH_TOKEN,
       },
     };
+  } else {
+    transportConf = {
+      ...transportConf,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    }
   }
+  console.log(transportConf)
 
   let transporter = nodemailer.createTransport(transportConf);
 
@@ -113,7 +125,7 @@ exports.handler = async (event, context) => {
   const data = _.pick(params, fields);
 
   if (!res.err) res = await sendMail(data);
-  if (!res.err) res = await addToSheets(data);
+  //if (!res.err) res = await addToSheets(data);
 
   if (res.err) {
     console.log(res.err);
