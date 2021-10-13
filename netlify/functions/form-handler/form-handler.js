@@ -3,6 +3,8 @@ import nodemailer from 'nodemailer';
 import fetch from 'node-fetch';
 import _ from 'lodash';
 import { GoogleSpreadsheet } from "google-spreadsheet";
+import Debug from "debug";
+const debug = Debug("FormHandler")
 
 if (!process.env.NETLIFY) {
   require("dotenv").config();
@@ -20,6 +22,7 @@ async function checkBeforeAddToSheetEnv() {
 }
 
 function parseMultipartForm(event) {
+  debug("parseMultipartForm");
   return new Promise((resolve) => {
     const fields = {};
     const busboy = new Busboy({
@@ -36,6 +39,7 @@ function parseMultipartForm(event) {
 }
 
 async function addToSheets(data) {
+  debug("addToSheets");
   let err = null;
   const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_FROM_URL);
 
@@ -54,6 +58,7 @@ async function addToSheets(data) {
 }
 
 async function sendMail(data) {
+  debug("sendMail");
   // Configure transporter
   let transportConf = {
     host: process.env.SMTP_SERVER,
@@ -128,6 +133,7 @@ async function sendMail(data) {
 }
 
 async function verifyRecaptcha(response) {
+  debug("verifyRecaptcha");
   const data = new URLSearchParams();
   data.append('secret', process.env.RECAPTCHA_SECRET);
   data.append('response', response);
@@ -155,10 +161,12 @@ export async function handler(event, context) {
   const fields = ["name", "phone", "email", "party", "date", "time"];
   const data = _.pick(params, fields);
 
+  debug(`ENABLE_RECAPTCHA=${process.env.ENABLE_RECAPTCHA}`);
   if (!res.err && process.env.ENABLE_RECAPTCHA)
     res = await verifyRecaptcha(params['g-recaptcha-response']);
-
+  debug(`ENABLE_EMAIL=${process.env.ENABLE_EMAIL}`);
   if (!res.err && process.env.ENABLE_EMAIL) res = await sendMail(data);
+  debug(`ENABLE_SHEETS=${process.env.ENABLE_SHEETS}`);
   if (!res.err && process.env.ENABLE_SHEETS) res = await addToSheets(data);
 
   if (res.err) {
