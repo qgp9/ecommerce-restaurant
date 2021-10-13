@@ -112,7 +112,7 @@ exports.handler = async (event, context) => {
   const fields = ["name", "phone", "email", "party", "date", "time"];
   const data = _.pick(params, fields);
 
-  if (!res.err) res = await sendMail(data);
+  /*if (!res.err) res = await sendMail(data);*/
   if (!res.err) res = await addToSheets(data);
 
   if (res.err) {
