@@ -155,7 +155,7 @@ export async function handler(event, context) {
   const fields = ["name", "phone", "email", "party", "date", "time"];
   const data = _.pick(params, fields);
 
-  if (!ress.err && process.env.ENABLE_RECAPTCHA)
+  if (!res.err && process.env.ENABLE_RECAPTCHA)
     res = await verifyRecaptcha(params['g-recaptcha-response']);
 
   if (!res.err && process.env.ENABLE_EMAIL) res = await sendMail(data);
