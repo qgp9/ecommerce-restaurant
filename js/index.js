@@ -25,6 +25,9 @@ function showModalReservationLoading() {
     text: 'Please wait for few seconds',
     didOpen: () => {
       Swal.showLoading();
+    },
+    didDestroy: () => {
+      grecaptcha.reset();
     }
   })
 }
@@ -60,14 +63,12 @@ function showModalReservatoinSuccess() {
 function setAjaxForm() {
   const form = document.getElementById('reservation-form');
   form.addEventListener('submit', event => {
-    console.log(event)
     const loading = showModalReservationLoading();
     fetch('/.netlify/functions/form-handler', {
       method: 'POST',
       body: new FormData(event.target)
     })
     .then(res => {
-      console.log('status', res.status)
       loading.close();
       if (res.status === 200)
         showModalReservatoinSuccess();
@@ -77,3 +78,15 @@ function setAjaxForm() {
     event.preventDefault();
   });
 }
+
+var onloadCallback = function() {
+  grecaptcha.render('recaptcha-element', {
+    sitekey : '6LdQWsscAAAAABMwmUPYI0Uc-XxAT0U6cFdEShMu',
+    callback: () => {
+      document.getElementById('reservation-submit-btn').disabled = false;
+    },
+    'expired-callback': () => {
+      document.getElementById('reservation-submit-btn').disabled = true;
+    }
+  })
+};

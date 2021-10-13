@@ -288,8 +288,9 @@
             <div class="note">
               <h4>*Please note that we will hold your table for 15 minutes from the time of your booking.</h4>
             </div>
+            <div id="recaptcha-element"></div>
             <div class="submit-btn">
-              <button type="submit" class="btn">Book a Table</button>
+              <button type="submit" class="btn" id="reservation-submit-btn" disabled>Book a Table</button>
             </div>
           </form>
         </div>
@@ -390,5 +391,8 @@
   <!-- js -->
   <script src="./js/index.js"></script>
   <script src="./js/slider.js"></script>   
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+  </script>
 </body>
 </html>

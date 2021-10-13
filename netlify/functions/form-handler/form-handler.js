@@ -1,6 +1,8 @@
-const querystring = require("querystring");
-const nodemailer = require("nodemailer");
-const _ = require("lodash");
+import Busboy from 'busboy';
+import nodemailer from 'nodemailer';
+import fetch from 'node-fetch';
+import _ from 'lodash';
+import { GoogleSpreadsheet } from "google-spreadsheet";
 
 if (!process.env.NETLIFY) {
   require("dotenv").config();
@@ -17,9 +19,24 @@ async function checkBeforeAddToSheetEnv() {
     throw new Error("no GOOGLE_SPREADSHEET_ID_FROM_URL env var set");
 }
 
+function parseMultipartForm(event) {
+  return new Promise((resolve) => {
+    const fields = {};
+    const busboy = new Busboy({
+      headers: event.headers
+    });
+    busboy.on("field", (fieldName, value) => {
+      fields[fieldName] = value;
+    });
+    busboy.on("finish", () => {
+      resolve(fields)
+    });
+    busboy.write(event.body);
+  });
+}
+
 async function addToSheets(data) {
   let err = null;
-  const { GoogleSpreadsheet } = require("google-spreadsheet");
   const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_FROM_URL);
 
   try {
@@ -70,7 +87,6 @@ async function sendMail(data) {
       }
     }
   }
-  console.log(transportConf)
 
   let transporter = nodemailer.createTransport(transportConf);
 
@@ -111,21 +127,39 @@ async function sendMail(data) {
   }
 }
 
-exports.handler = async (event, context) => {
+async function verifyRecaptcha(response) {
+  const data = new URLSearchParams();
+  data.append('secret', process.env.RECAPTCHA_SECRET);
+  data.append('response', response);
+  const res =  await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'post',
+    body: data,
+  }).then(res => res.json());
+  res.err = !res.success;
+  return res;
+}
+
+export async function handler(event, context) {
   let res = {};
+  let err = null;
+
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
   try {
     checkBeforeAddToSheetEnv();
-  } catch (e) {}
+  } catch (e) {} // TODO
+
   // parse data
-  const params = querystring.parse(event.body);
+  const params = await parseMultipartForm(event);
   const fields = ["name", "phone", "email", "party", "date", "time"];
   const data = _.pick(params, fields);
 
-  if (!res.err) res = await sendMail(data);
-  //if (!res.err) res = await addToSheets(data);
+  if (!ress.err && process.env.ENABLE_RECAPTCHA)
+    res = await verifyRecaptcha(params['g-recaptcha-response']);
+
+  if (!res.err && process.env.ENABLE_EMAIL) res = await sendMail(data);
+  if (!res.err && process.env.ENABLE_SHEETS) res = await addToSheets(data);
 
   if (res.err) {
     console.log(res.err);
