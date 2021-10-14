@@ -154,10 +154,10 @@ export async function handler(event, context) {
   }
   try {
     checkBeforeAddToSheetEnv();
-  } catch (e) {} // TODO
+  } catch (e) {res.err = e} // TODO
 
   // parse data
-  const params = await parseMultipartForm(event);
+  const params = await parseMultipartForm(event).catch(e => res.err = e);
   const fields = ["name", "phone", "email", "party", "date", "time"];
   const data = _.pick(params, fields);
 
