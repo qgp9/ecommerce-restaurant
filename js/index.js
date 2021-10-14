@@ -74,6 +74,7 @@ function setAjaxForm() {
         showModalReservatoinSuccess();
       else
         showModalReservationError();
+      console.log(res);
     })
     event.preventDefault();
   });
