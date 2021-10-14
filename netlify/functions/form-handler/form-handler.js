@@ -1,4 +1,3 @@
-import Busboy from 'busboy';
 import nodemailer from 'nodemailer';
 import fetch from 'node-fetch';
 import _ from 'lodash';
@@ -19,23 +18,6 @@ async function checkBeforeAddToSheetEnv() {
     throw new Error("no GOOGLE_PRIVATE_KEY env var set");
   if (!process.env.GOOGLE_SPREADSHEET_ID_FROM_URL)
     throw new Error("no GOOGLE_SPREADSHEET_ID_FROM_URL env var set");
-}
-
-function parseMultipartForm(event) {
-  debug("parseMultipartForm");
-  return new Promise((resolve) => {
-    const fields = {};
-    const busboy = new Busboy({
-      headers: event.headers
-    });
-    busboy.on("field", (fieldName, value) => {
-      fields[fieldName] = value;
-    });
-    busboy.on("finish", () => {
-      resolve(fields)
-    });
-    busboy.write(event.body);
-  });
 }
 
 async function addToSheets(data) {
@@ -67,29 +49,14 @@ async function sendMail(data) {
 
   transportConf.secure = process.env.SMTP_SECURE ? true : false;
 
-  if (process.env.SMTP_SERVICE === 'gmail') {
-    transportConf = {
-      ...transportConf,
-      service: "gmail",
-      secure: "true",
-      auth: {
-        type: "OAuth2",
-        user: process.env.OAUTH_USER,
-        clientId: process.env.OAUTH_CLIENT_ID,
-        clientSecret: process.env.OAUTH_CLIENT_SECRET,
-        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-      },
-    };
-  } else {
-    transportConf = {
-      ...transportConf,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
+  transportConf = {
+    ...transportConf,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS
+    },
+    tls: {
+      rejectUnauthorized: false
     }
   }
 
@@ -157,11 +124,11 @@ export async function handler(event, context) {
   } catch (e) {res.err = e} // TODO
 
   // parse data
-  const params = await parseMultipartForm(event).catch(e => res.err = e);
+  // TODO: should handle formdata either
+  const params = JSON.parse(event.body);
   const fields = ["name", "phone", "email", "party", "date", "time"];
   const data = _.pick(params, fields);
 
-  debug('after multipart before recaptcha')
   debug(`ENABLE_RECAPTCHA=${process.env.ENABLE_RECAPTCHA}`);
   if (!res.err && process.env.ENABLE_RECAPTCHA)
     res = await verifyRecaptcha(params['g-recaptcha-response']);

@@ -63,10 +63,13 @@ function showModalReservatoinSuccess() {
 function setAjaxForm() {
   const form = document.getElementById('reservation-form');
   form.addEventListener('submit', event => {
+    event.preventDefault();
     const loading = showModalReservationLoading();
+    const formData = new FormData(event.target);
+    const values = Object.fromEntries(formData.entries());
     fetch('/.netlify/functions/form-handler', {
       method: 'POST',
-      body: new FormData(event.target)
+      body: JSON.stringify(values)
     })
     .then(res => {
       loading.close();
@@ -76,7 +79,6 @@ function setAjaxForm() {
         showModalReservationError();
       console.log(res);
     })
-    event.preventDefault();
   });
 }
 
