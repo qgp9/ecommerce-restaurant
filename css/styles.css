@@ -651,10 +651,6 @@ Loader
     letter-spacing: 0.05rem;
     font-size: 1rem;
   }
-
-  .content .bottom {
-    display: none;
-  }
 }
 
 @media (max-width: 320px) {
@@ -791,7 +787,7 @@ Main
   color: var(--white);
   font-size: 2.5rem;
   border-radius: 1rem;
-  border: 2px solid white;
+  border: 1px solid white;
   height: 4rem;
   width: 4rem;
   justify-content: center;
@@ -853,9 +849,23 @@ Main
 }
 
 @media (max-width: 600px) {
-  .custom-next,
+  .custom-next {
+    right: 10px;
+    height: 3rem;
+    width: 3rem;
+    top: -3%;
+    transform: translateY(0%);
+    border: 0px solid white;
+  }
+
   .custom-prev {
-    display: none;
+    left: auto;
+    right: 40px;
+    height: 3rem;
+    width: 3rem;
+    top: -3%;
+    transform: translateY(0%);
+    border: 0px solid white;
   }
 
   .menu .title {
@@ -872,11 +882,28 @@ Main
     margin: 1rem 0;
     padding: 0 1rem;
   }
+  .custom-next {
+    top: -5.5%;
+    transform: translateY(0%);
+  }
+
+  .custom-prev {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
   .menu .container {
     padding: 0 1rem;
+  }
+
+  .custom-next {
+    top: -5.5%;
+    transform: translateY(0%);
+  }
+
+  .custom-prev {
+    display: none;
   }
 
   .menu .title h1 {
@@ -913,6 +940,15 @@ Main
 @media (max-width: 280px) {
   #menu {
     padding-bottom: 2rem;
+  }
+
+  .custom-next {
+    top: -5%;
+    transform: translateY(0%);
+  }
+
+  .custom-prev {
+    display: none;
   }
 
   .menu .container {
@@ -1048,7 +1084,7 @@ Reservation
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 600px) {
   #reservation {
     background-image: url("/images/mannatable_small.png");
   }
@@ -1165,7 +1201,7 @@ Banner gift-card
 }
 
 .banner .left img {
-  padding: 0 3rem;
+  border-radius: 1rem;
 }
 
 .banner .right {
@@ -1174,11 +1210,18 @@ Banner gift-card
   align-items: center;
   text-align: center;
   justify-content: center;
+  margin-left: 3rem;
 }
 
 .banner h1 {
   font-size: 5rem;
   color: var(--black);
+}
+
+@media (max-width: 1024px) {
+  .banner h1 {
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1203,18 +1246,33 @@ Banner gift-card
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 580px) {
+  .banner .left {
+    margin-left: 1.5rem;
+  }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 550px) {
   .banner {
     display: flex;
     flex-direction: column;
     height: 60vh;
   }
 
+  .banner .left {
+    margin: 0 auto;
+  }
+
   .banner .left img {
-    padding: 3rem;
+    width: 300px;
+    height: 250px;
+    margin-bottom: 1.5rem;
+  }
+}
+/*
+@media (max-width: 425px) {
+  .banner {
+    height: 68vh;
   }
 }
 
@@ -1224,7 +1282,6 @@ Banner gift-card
   }
 
   .banner .right {
-    padding: 0 1rem;
   }
 }
 
@@ -1233,8 +1290,14 @@ Banner gift-card
     padding: 2rem;
   }
 }
-
+*/
 @media (max-width: 320px) {
+  .banner .left img {
+    width: 280px;
+    height: 230px;
+    margin: 1.5rem 0;
+  }
+
   .banner .right h3 {
     font-size: 1.5rem;
   }
@@ -1244,17 +1307,24 @@ Banner gift-card
   }
 
   .banner p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
   }
 }
 
 @media (max-width: 280px) {
+  .banner .left img {
+    width: 240px;
+    height: 180px;
+    margin: 1.2rem 0;
+  }
+
   .banner .right h3 {
     font-size: 1.5rem;
   }
 
   .banner h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .banner p {
