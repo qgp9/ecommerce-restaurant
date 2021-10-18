@@ -250,6 +250,7 @@ Loader
 
 .logo h1 {
   font-size: 3rem;
+  letter-spacing: 0.05rem;
   color: var(--text2);
   font-family: "MedievalSharp", cursive;
 }

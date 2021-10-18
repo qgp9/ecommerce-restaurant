@@ -237,6 +237,7 @@ Loader
 
 .logo h1 {
   font-size: 3rem;
+  letter-spacing: 0.05rem;
   color: var(--white);
   font-family: "MedievalSharp", cursive;
 }
@@ -357,7 +358,7 @@ Loader
 }
 
 .header .content {
-  width: 100%;
+  width: 80%;
   position: absolute;
   top: 60%;
   left: 50%;
