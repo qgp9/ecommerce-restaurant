@@ -379,10 +379,10 @@ Loader
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
 }
 
-.content h2,
-.content h3 {
+.content .center h2 {
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
   font-weight: 800;
+  transition: var(--transition-500);
 }
 
 .content .btn {
