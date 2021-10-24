@@ -2,8 +2,6 @@ import nodemailer from 'nodemailer';
 import fetch from 'node-fetch';
 import _ from 'lodash';
 import { GoogleSpreadsheet } from "google-spreadsheet";
-import Debug from "debug";
-const debug = Debug("FormHandler")
 
 if (!process.env.NETLIFY) {
   require("dotenv").config();
@@ -16,12 +14,9 @@ async function checkBeforeAddToSheetEnv() {
     throw new Error("no GOOGLE_SERVICE_ACCOUNT_EMAIL env var set");
   if (!process.env.GOOGLE_PRIVATE_KEY)
     throw new Error("no GOOGLE_PRIVATE_KEY env var set");
-  if (!process.env.GOOGLE_SPREADSHEET_ID_FROM_URL)
-    throw new Error("no GOOGLE_SPREADSHEET_ID_FROM_URL env var set");
 }
 
 async function addToSheets(data) {
-  debug("addToSheets");
   let err = null;
   const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_FROM_URL);
 
@@ -40,7 +35,6 @@ async function addToSheets(data) {
 }
 
 async function sendMail(data) {
-  debug("sendMail");
   // Configure transporter
   let transportConf = {
     host: process.env.SMTP_SERVER,
@@ -100,7 +94,6 @@ async function sendMail(data) {
 }
 
 async function verifyRecaptcha(response) {
-  debug("verifyRecaptcha");
   const data = new URLSearchParams();
   data.append('secret', process.env.RECAPTCHA_SECRET);
   data.append('response', response);
@@ -129,54 +122,34 @@ export async function handler(event, context) {
   const fields = ["name", "phone", "email", "party", "date", "time"];
   const data = _.pick(params, fields);
 
-  debug(`ENABLE_RECAPTCHA=${process.env.ENABLE_RECAPTCHA}`);
-  if (!res.err && process.env.ENABLE_RECAPTCHA)
+  if (process.env.ENABLE_RECAPTCHA) {
     res = await verifyRecaptcha(params['g-recaptcha-response']);
-  debug(`ENABLE_EMAIL=${process.env.ENABLE_EMAIL}`);
-  if (!res.err && process.env.ENABLE_EMAIL) res = await sendMail(data);
-  debug(`ENABLE_SHEETS=${process.env.ENABLE_SHEETS}`);
-  if (!res.err && process.env.ENABLE_SHEETS) res = await addToSheets(data);
-
-  if (res.err) {
-    console.log(res.err);
-    return {
-      statusCode: 500,
-      err: res.err,
-      body: "500 Internal Server Error",
-    };
+    if (res.err) {
+      return {
+        statusCode: 500,
+        err: "reCAPTCHA error",
+        body: "reCAPTCHA error"
+      }
+    }
   }
 
+  const tasks = []
+  if (process.env.ENABLE_EMAIL) tasks.push(sendMail(data));
+  if (process.env.ENABLE_SHEETS) tasks.push(addToSheets(data));
+
+  // wait results of all tasks
+  const rets = await Promise.all(tasks)
+  // 이메일/구글 중에 하나라도 성공하면 성공으로 하자
+  const error = rets.reduce((e,t) => (e && t.err ), true);
+  if (error) {
+    return {
+      statusCode: 500,
+      err: "unknown Error",
+      body: "Unknown Error"
+    }
+  };
   return {
     statusCode: 200,
-    body: `
-      <html>
-        <body style="margin: 3rem; backgroundColor: rgb(251, 247, 237);">
-          <header style="color: rgba(175, 149, 74, 1); margin: 0 auto;">
-            <h3>[Manna korean restaurant]</h3>
-          </header>
-          <main style="border: 1px solid red; padding: 2rem;">
-            <div>
-              Dear <strong>${data.name}</strong>, Thank you for making a reservation. 
-              <p>
-                Please note that we will hold your table for <strong>15 minutes</strong> from the time of your booking.
-              </p>
-              <p>
-                If you are running more than 15 minutes late on the day, 
-                please give us a call and we will do everything we can to accommodate you.
-              </p>
-              <p>
-                Please do not hesitate to contact us at <strong>(+358)050-3445562</strong> if you have any questions about your reservation 
-                or if you have any special needs.
-              </p>
-              <div style="color:rgba(175, 149, 74, 1); text-decoration: none">
-                <a href="https://mannaravintola.netlify.app">
-                  <p style="color:rgba(175, 149, 74, 1)">Go back to Manna</p>
-                </a>
-              </div>
-            </div>
-          </main>
-        </body>
-      </html>
-    `,
+    body: 'ok'
   };
 };
