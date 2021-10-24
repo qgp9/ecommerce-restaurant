@@ -250,6 +250,7 @@ Loader
 
 .logo h1 {
   font-size: 3rem;
+  letter-spacing: 0.05rem;
   color: var(--text2);
   font-family: "MedievalSharp", cursive;
 }
@@ -510,10 +511,17 @@ MENU Page
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .menu .list ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 @media only screen and (max-width: 580px) {
   .menu .list ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .menu .list {
