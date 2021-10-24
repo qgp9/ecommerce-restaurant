@@ -250,6 +250,7 @@ Loader
 
 .logo h1 {
   font-size: 3rem;
+  letter-spacing: 0.05rem;
   color: var(--white);
   font-family: "MedievalSharp", cursive;
 }
@@ -370,7 +371,7 @@ Loader
 }
 
 .header .content {
-  width: 100%;
+  width: 80%;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -391,10 +392,10 @@ Loader
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
 }
 
-.content h2,
-.content h3 {
+.content .center h2 {
   text-shadow: 5px 5px 0px rgba(1, 6, 17, 0.2);
   font-weight: 800;
+  transition: var(--transition-500);
 }
 
 .content .btn {
@@ -664,10 +665,6 @@ Loader
     letter-spacing: 0.05rem;
     font-size: 1rem;
   }
-
-  .content .bottom {
-    display: none;
-  }
 }
 
 @media (max-width: 320px) {
@@ -804,7 +801,7 @@ Main
   color: var(--white);
   font-size: 2.5rem;
   border-radius: 1rem;
-  border: 2px solid white;
+  border: 1px solid white;
   height: 4rem;
   width: 4rem;
   justify-content: center;
@@ -866,9 +863,23 @@ Main
 }
 
 @media (max-width: 600px) {
-  .custom-next,
+  .custom-next {
+    right: 10px;
+    height: 3rem;
+    width: 3rem;
+    top: -3%;
+    transform: translateY(0%);
+    border: 0px solid white;
+  }
+
   .custom-prev {
-    display: none;
+    left: auto;
+    right: 40px;
+    height: 3rem;
+    width: 3rem;
+    top: -3%;
+    transform: translateY(0%);
+    border: 0px solid white;
   }
 
   .menu .title {
@@ -885,11 +896,28 @@ Main
     margin: 1rem 0;
     padding: 0 1rem;
   }
+  .custom-next {
+    top: -5.5%;
+    transform: translateY(0%);
+  }
+
+  .custom-prev {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
   .menu .container {
     padding: 0 1rem;
+  }
+
+  .custom-next {
+    top: -5.5%;
+    transform: translateY(0%);
+  }
+
+  .custom-prev {
+    display: none;
   }
 
   .menu .title h1 {
@@ -926,6 +954,15 @@ Main
 @media (max-width: 280px) {
   #menu {
     padding-bottom: 2rem;
+  }
+
+  .custom-next {
+    top: -5%;
+    transform: translateY(0%);
+  }
+
+  .custom-prev {
+    display: none;
   }
 
   .menu .container {
@@ -1071,7 +1108,7 @@ Reservation
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 600px) {
   #reservation {
     background-image: url("/images/mannatable_small.png");
   }
@@ -1181,14 +1218,16 @@ Banner gift-card
 .banner {
   display: flex;
   background-color: var(--gold);
-  height: 40vh;
+  height: 50%;
   margin-bottom: 0;
-  justify-content: center;
-  padding: 3rem 0;
+  justify-content: space-evenly;
+  padding: 2rem 0;
 }
 
 .banner .left img {
-  padding: 0 3rem;
+  border-radius: 1rem;
+  width: 500px;
+  height: 344px;
 }
 
 .banner .right {
@@ -1200,19 +1239,29 @@ Banner gift-card
 }
 
 .banner h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--black);
 }
 
+@media (max-width: 1024px) {
+  .banner .left img {
+    width: 400px;
+    height: 275px;
+  }
+
+  .banner h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .banner .left img {
+    width: 300px;
+    height: 206px;
+  }
+}
+
 @media (max-width: 768px) {
-  .banner {
-    height: 30vh;
-  }
-
-  .banner .right {
-    padding-right: 1rem;
-  }
-
   .banner .right h3 {
     font-size: 1.8rem;
   }
@@ -1226,34 +1275,25 @@ Banner gift-card
   }
 }
 
-@media (max-width: 660px) {
-}
-
-@media (max-width: 425px) {
+@media (max-width: 635px) {
   .banner {
     display: flex;
     flex-direction: column;
-    height: 60vh;
-  }
-
-  .banner .left img {
-    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
-@media (max-width: 414px) {
-  .banner {
-    height: 75vh;
-  }
-
-  .banner .right {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   .banner .left img {
-    padding: 2rem;
+    width: 270px;
+    height: 185px;
+  }
+
+  .banner p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1267,17 +1307,22 @@ Banner gift-card
   }
 
   .banner p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 280px) {
+  .banner .left img {
+    width: 250px;
+    height: 172px;
+  }
+
   .banner .right h3 {
     font-size: 1.5rem;
   }
 
   .banner h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .banner p {
