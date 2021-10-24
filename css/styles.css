@@ -105,8 +105,8 @@ video {
 
 .btn:disabled,
 .btn[disabled]{
-  background-color: var(--grey1);
-  color: var(--grey3);
+  background-color: var(--gold);
+  color: var(--grey1);
   cursor: not-allowed;
 }
 
@@ -1042,6 +1042,16 @@ Reservation
 
 .note h4 {
   font-weight: 300;
+}
+
+.recaptcha-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+#recaptcha-element {
+  display: inline-block;
+  margin-top: 1.5em;
 }
 
 .submit-btn {
